@@ -1,28 +1,64 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 	<head>
-		<title> Aggie Coding Club </title>
+	
+	<title>Aggie Coding Club</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+	
 	</head>
+	
 	<body>
+	
 		<header>
-			<h1> Aggie Coding Club </h1>
-			<img src = "Images/Logo.png" />
+			<h1>Aggie Coding Club</h1>
 		</header>
-		<nav>
+
+		<section class="nav">
 			<ul>
-				<a href = "ACCmain.html"> <li> Home </li> </a>
-				<li> About Us </li>
-				<a href = "ACCcontact.html"> <li> Contact </li> </a>
-				<a href = "ACCresources.html"><li> Resources </li> </a>
-				<a href = "ACCportfolio.html"><li> Portfolio </li> </a>
+				<li><a href="ACCmain.html" title="Home">Home</a></li>
+				<li><a href="ACCcontact.html" title="Contact">Contact Us</a></li>
+				<li><a href="ACCresources.html" title="Resources">Resources</a></li>
+				<li><a href="ACCprojects" title="Projects">Projects</a></li>
 			</ul>
-		</nav>
-		<main>
-			<h2> About Us </h2>
-			<p> Stuff goes here once we actually have content
-				asdfkjas;dflkjasdj;fsdalkfj;as;
-				sadl;jfk;asldkjfpoasdijfqw;lkjdsa;l;
-			</p>
-		</main>
+		</section>
+		
+		<!--img url: 
+		http://sfmstechapps.org/2016/02/lets-code/coding-super-power/ 
+		-->
+		<img src="coding-super-power.jpg" alt="description" title="code-logo" width="" height="" />
+		
+		<h1>Description</h1>
+		<p>Aggie Coding Club is an orginization that aims to deliver project development opportunities for its members.</p>
+		
+		<h2>Current Members</h2>
+		<!-- figure out a way to populate this from db or whatever... -->
+		
+		<table border="1">
+			<tr>
+				<td>Profile Picture</td>
+				<td>Member</td>
+				<td>Position</td>
+				<td>Skills</td>
+			</tr>
+			<tr>
+				<td><img src="Images/MichaelMcKenna.jpeg" alt="Picture" title="ProfilePic" width="" height="" />
+				<td>Michael McKenna</td>
+				<td>President</td>
+				<td>IOS</td>
+			</tr>
+		</table>
+		<p class="social-links">
+		<a href="https://twitter.com/beRecruited" target="_blank">
+		<span class="fa fa-twitter-square"></span>
+		</a>                  <a href="https://www.facebook.com/BeRecruited" target="_blank">
+		<span class="fa fa-facebook-square"></span>
+		</a>               
+		</p>
+		<footer>
+		&copy; ACC <br>
+
+		<!--<a href="mailto:madewithlinux.josh@gmail.com" title="madewithlinux.josh@gmail.com">madewithlinux.josh@gmail.com</a>-->
+		</footer>
 	</body>
 </html>
