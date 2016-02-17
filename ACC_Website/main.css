@@ -2,12 +2,12 @@
 
 html {
 	font-family: 'Open Sans', sans-serif;
-	max-width: 1200px;
+	max-width: auto;
 	font-size: 16px;
 	/*top-bottom, left-right*/
-	margin: 0 auto;
+	margin: 0 0;
 	position: relative;
-	background-color: #E3E3E3;
+	/*background-color: #E3E3E3;*/
 	height: 100%;
 	padding: 0;
 }
@@ -18,7 +18,8 @@ body {
 	color: #444;
 	margin: 0;
 	padding: 0;
-	/*background-color: #fff;*/
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
 	height: 100%;
 }
 
@@ -31,6 +32,7 @@ header {
 	text-align: center;
 	font-size: 1.4em;
 }
+
 header a {color: #fff; text-decoration: none;}
 header a:visited {color: #fff; text-decoration: none;}
 header a:hover {color: #aaa; text-decoration: none; transition: background-color .25s;}
@@ -38,10 +40,10 @@ header a:hover {color: #aaa; text-decoration: none; transition: background-color
 section.nav {
 	/*position: absolute;*/
 	/*top: 100px;*/
-	/*left: 0px;*/
+	right: 0px;
 	padding: 0 0 0 0;
 	width: 100%;
-	background-color: #8F8F8C;
+	/*background-color: #8F8F8C;*/
 }
 
 section.nav::after {
@@ -58,7 +60,7 @@ section.nav ul {
 
 section.nav ul li { 
 	/*so that the items appear all on the same line*/
-	float: left;
+	float: right;
 	margin: 8px;
 }
 
@@ -97,19 +99,32 @@ a.btn:hover {
 	/*transition time whenever background color changes*/
 	transition: background-color .25s;
 }
-
-
+div.News{
+	background-color: #E3E3E3;
+	display: block;
+	max-width: 500px;
+	margin-right: auto;
+}
+div.Events{
+	background-color: #E3E3E3;
+	display: block;
+	max-width: 500px;
+	margin-left: auto;
+}
+div.footer{
+	margin-bottom: 100px;
+}
 img {
 	margin-left: auto;
 	margin-right: auto;
 }
-/*footer*/
+/*footer
 footer {
 	padding: 0 20px;
 	padding-bottom: 20px;
 	background-color: #fff;
 }
-
+*/
 
 
 /*mobile devices*/
