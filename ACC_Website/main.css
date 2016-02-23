@@ -15,7 +15,7 @@ html {
 body {
 	font-size: 16px;
 	font-weight: 400;
-	color: #444;
+	color: #fff;
 	margin: 0;
 	padding: 0;
 	background-size: 100% 100%;
@@ -100,21 +100,34 @@ a.btn:hover {
 	transition: background-color .25s;
 }
 div.News{
-	background-color: #E3E3E3;
-	display: block;
-	max-width: 500px;
-	margin-right: auto;
+	background-color: #C0C0C0;
+	display: inline-block;
+	position: absolute;
+	top: 200px;
+	/*opacity: .5;*/
+	max-width: 800px;
+	max-height: 500px;
+	margin-left: 50px;
 }
 div.Events{
-	background-color: #E3E3E3;
-	display: block;
-	max-width: 500px;
-	margin-left: auto;
+	background-color: #C0C0C0;
+	display: inline-block;
+	position: absolute;
+	top: 200px;
+	max-height: 500px;
+	right: 50px;
+	
+	/*max-width: 800px;*/
+	/*margin-right: 20px;*/
+
 }
 div.footer{
-	margin-bottom: 100px;
+	
+	position: absolute;
+	bottom: 5px;
 }
 img {
+	
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -144,7 +157,39 @@ footer {
 		margin-bottom: 0;
 		font-size: 0.8em;
 	}
+	body {
+	font-size: 16px;
+	font-weight: 400;
+	color: #fff;
+	margin: 0;
+	padding: 0;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	height: 100%;
+}
 
+div.News{
+	background-color: #C0C0C0;
+	display: inline-block;
+	position: absolute;
+	top: 20px;
+	/*opacity: .5;*/
+	max-width: 80px;
+	height: 50px;
+	margin-left: 50px;
+}
+div.Events{
+	background-color: #C0C0C0;
+	display: inline-block;
+	position: absolute;
+	top: 200px;
+	max-height: 500px;
+	right: 50px;
+	
+	/*max-width: 800px;*/
+	/*margin-right: 20px;*/
+
+}
 	section.nav ul {
 		display: flex;
 		justify-content: space-between;
