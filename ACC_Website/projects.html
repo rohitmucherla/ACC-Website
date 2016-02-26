@@ -3,6 +3,7 @@
 	<head>
 		<title> Aggie Coding Club </title>
         <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+        <script type="text/javascript" src="JavaScript.js"></script>
 	</head>
 	<body>
 		<header>
@@ -20,18 +21,61 @@
 		</nav>
 		<main>
             <div class="Projects-Container">
-                <div class="Project">
+                <div class="Project" id="p1">
                     <img class="Proj-Pic" src="Images/Grover-Cleveland.jpg" />
-                    <div class="Proj-Title">EventMe</div>
-                    <button class="Proj-Expand"><img src="Images/expand-button.png" /></button>
+                    <div class="tab-container">
+                        <ul class="tab-links" data-tab-group="1">
+                            <li><a href="#tab1" class="">Tab 1</a></li>
+                            <li><a href="#tab2">Tab 2</a></li>
+                            <li><a class="active" href="#tab3">Tab 3</a></li>
+                            <li><a class="" href="#tab4">Tab 4</a></li>
+                        </ul>
+                        <div data-tab-group="1" data-tab="tab1" class="tab">
+                            <h3 class="tab-hdr">Tab 1</h3>
+                            <div class="tab-content">
+                                <p>Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.</p>
+                            </div>
+                        </div>
+                        <div data-tab-group="1" data-tab="tab2" class="tab">
+                            <h3 class="tab-hdr">Tab 2</h3>
+                            <div class="tab-content">
+                                <p>Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.</p>
+                            </div>
+                        </div>
+                        <div data-tab-group="1" data-tab="tab3" class="tab active">
+                            <h3 class="tab-hdr">Tab 3</h3>
+                            <div class="tab-content">
+                                <p>Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.</p>
+                            </div>
+                        </div>
+                        <div data-tab-group="1" data-tab="tab4" class="tab">
+                            <h3 class="tab-hdr">Tab 4</h3>
+                            <div class="tab-content">
+                                <p>Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div>
+                        <div class="Proj-Title">EventMe<button class="Proj-Expand" id="e1"><img class="Proj-Expand" src="Images/expand-button.png" /></button></div>
+                    </div>
                 </div>
-                <div class="Project">
+                <div class="Project" id="p2">
                     <img class="Proj-Pic" src="Images/Grover-Cleveland.jpg" />
-                    <div class="Proj-Title">EventMe</div>
+                    <div>
+                        <div class="Proj-Title">
+                            EventMe
+                            <button class="Proj-Expand" id="e2">
+                                <img class="Proj-Expand" src="Images/expand-button.png" />
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div class="Project">
+                <div class="Project" id="p3">
                     <img class="Proj-Pic" src="Images/Grover-Cleveland.jpg" />
-                    <div class="Proj-Title">EventMe</div>
+                    <div>
+                        <div class="Proj-Title">EventMe<button class="Proj-Expand" id="e3"><img class="Proj-Expand" src="Images/expand-button.png" /></button></div>
+                    </div>
                 </div>
             </div>
 		</main>

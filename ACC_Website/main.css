@@ -22,5 +22,54 @@ img.Proj-Pic{
     padding:20px;
     font-size:200%;
     font-weight:bold;
-
+    margin:0px;
 }
+
+.Proj-expanded .Proj-Pic{
+    display:none;
+}
+
+.tab-container{
+    display:none;
+}
+
+.Proj-expanded .tab-container{
+    display:block;
+}
+
+img.Proj-Expand{
+    width:100%;
+}
+button.Proj-Expand{
+    width:25%;
+    float:right;
+}
+
+.Proj-hidden{
+    display:none;
+}
+
+.Proj-expanded{
+    width:99%;
+    margin:0;
+}
+
+.Proj-expanded button.Proj-Expand {
+    width: 5%;
+}
+
+.tab-links {
+  background: #500000;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  margin: 0 0 25px; }
