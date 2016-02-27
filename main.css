@@ -1,5 +1,5 @@
 .Project{
-    width: 30%;
+    width: 45%;
     float: left;
     border: 2px solid black;
     margin-right: 1%;
@@ -133,4 +133,8 @@ button.Proj-Expand{
 
 .club-logo{
     
+}
+
+.kill{
+    display:none !important;
 }
