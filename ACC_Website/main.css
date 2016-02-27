@@ -61,7 +61,6 @@ button.Proj-Expand{
 .tab-links {
   background: #500000;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
@@ -72,4 +71,43 @@ button.Proj-Expand{
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap;
-  margin: 0 0 25px; }
+  margin: 0 0 25px; 
+  list-style-type:none;
+}
+
+.tab-links li {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1; 
+
+}
+.tab-links a {
+    border-bottom: 3px solid transparent;
+    height: 40px;
+    font-size: 1rem;
+    line-height: 40px;
+    padding: 0 10px;
+    -webkit-transition: border .225s ease,      
+    color .225s ease;
+            transition: border .225s ease,      
+    color .225s ease;
+    will-change: border, color;
+    color: rgba(255, 255, 255, 0.8);
+}
+.tab-links a:hover {
+    color: #fff;
+}
+.tab-links a:hover, .tab-links a.active {
+    border-color: rgba(255, 255, 255, 0.7);
+    color: #fff; 
+
+}
+
+.tab{
+    display:none;
+}
+
+.active-content{
+    display: block;
+}
