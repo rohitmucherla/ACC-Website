@@ -56,13 +56,53 @@ section.nav ul {
     /*remove bullets*/
     list-style: none;
     margin: 0;
-    padding: 0px;
+    padding: 0;
+    display: inline-block;
+    float: right;
 }
 
 section.nav ul li {
     /*so that the items appear all on the same line*/
-    float: right;
+    float: left;
     margin: 8px;
+}
+
+/*section.nav ul li a:after {*/
+section.nav ul li a[aria-haspopup="true"]::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 5px;
+    /*CSS arrow*/
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid #000000;
+}
+
+section.nav ul ul {
+    /*second menu level*/
+    /*don't show by default*/
+    display: none;
+    /*absolute positioned so that it doesn't count toward parent element size*/
+    position: absolute;
+}
+section.nav ul li:hover > ul {
+    /*show when parent is hovered*/
+    display: block;
+    /*make these display above the rest of the page*/
+    z-index: 3;
+}
+section.nav ul li:hover > ul li {
+    display: block;
+    /*make them not all bunch to one side*/
+    float: none;
+    margin: 0;
+}
+section.nav ul li:hover > ul li a {
+    /*hoverd sub-list*/
+    /*constant width so they all line up*/
+    width: 125px;
 }
 
 section.nav ul li a {
