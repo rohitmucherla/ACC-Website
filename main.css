@@ -25,7 +25,7 @@ body {
 
 div#header {
     /*semi-transparent background for better text readability*/
-    background-color: rgba(80,0,0,0.5);
+    background-color: rgb(80,0,0);
 	height: 5em;
 }
 
@@ -44,6 +44,7 @@ section.nav {
     right: 0;
     padding: 10px 10px 0 0;
     clear: both;
+
     /*background-color: #8F8F8C;*/
 }
 
@@ -60,12 +61,14 @@ section.nav ul {
     padding: 0;
     display: inline-block;
     float: right;
+
 }
 
 section.nav ul li {
     /*so that the items appear all on the same line*/
     float: left;
     margin: 8px;
+
 }
 
 /*section.nav ul li a:after {*/
@@ -75,10 +78,6 @@ section.nav ul li a[aria-haspopup="true"]::after {
     width: 0;
     height: 0;
     margin-left: 5px;
-    /*CSS arrow*/
-    border-top: 6px solid transparent;
-    border-bottom: 6px solid transparent;
-    border-left: 6px solid #000000;
 }
 
 section.nav ul ul {
@@ -107,10 +106,10 @@ section.nav ul li:hover > ul li a {
 }
 
 section.nav ul li a {
-    background-color: #fff;
+    background-color: transparent;
     display: block;
     padding: 12px;
-    color: #000;
+    color: #fff;
     text-decoration: none;
     font-weight: 700;
     font-size: 1.2em;
@@ -142,7 +141,7 @@ div.footer {
 .Project{
     width: 45%;
     float: left;
-    border: 2px solid black;
+	box-shadow: 10px 10px 10px #888888;
     margin-right: 1%;
     margin-left: 1%;
 	background-color: white;
@@ -150,8 +149,11 @@ div.footer {
 }
 
 .Projects-Container{
+	position: relative;
+	top: -4em;
     height:auto;
     width: inherit;
+	height: 100em;
     margin: 150px;
     overflow: auto;
 
@@ -163,14 +165,18 @@ img.Proj-Pic{
 }
 
 .Proj-Title{
-    padding:20px;
-    font-size:200%;
-    font-weight:bold;
-    margin:0px;
+	position: relative;
+	left: .5em;
+	bottom: -.5em;
+	width: 60%;
+	margin: 0;
+	float:left;
 }
 
 .Proj-expanded .Proj-Pic{
     display:none;
+	position: absolute;
+	top: 1em;
 }
 
 .tab-container{
@@ -184,9 +190,10 @@ img.Proj-Pic{
 img.Proj-Expand{
     width: 5em;
 	height: 5em;
-	
 }
 button.Proj-Expand{
+	position: relative;
+	right: .5em;
     width:5em;
 	height: 5em;
     float:right;
