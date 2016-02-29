@@ -1,26 +1,79 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-	<head>
-		<title> Aggie Coding Club </title>
-	</head>
-	<body>
-		<header>
-			<h1> Aggie Coding Club </h1>
-			<img src = "Images/Logo.png" />
-		</header>
-		<nav>
-			<ul>
-				<a href = "index.html"> <li> Home </li> </a>
-				<li> Projects </li>
-				<a href = "contact.html"> <li> Contact </li> </a>
-				<a href = "resources.html"><li> Resources </li> </a>
-				<a href = "about.html"><li> About Us </li> </a>
-			</ul>
-		</nav>
-		<main>
-		<p>
-			Website under construction
-		</p>
-		</main>
-	</body>
+<head>
+    <title>Aggie Coding Club</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+    <link rel="stylesheet" type="text/css"
+          media="only screen and(max-device width:600px" href="css/mobile.css">
+</head>
+
+<body background="Images/academic_plaza.jpeg">
+<div id="wrapper">
+    <div id="header">
+        <!--<img style="float:right" src="acc.jpeg" alt="description" title="acc-logo" width="70" height="70" />-->
+        <div id="title_logo">
+            <h1>Aggie Coding Club</h1>
+        </div>
+        <section class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ACCprojects.html" title="Projects" aria-haspopup="true">Projects</a>
+                    <ul>
+                        <li><a href="#">project 1</a></li>
+                        <li><a href="#">project 2</a></li>
+                        <li><a href="#">project 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="ACCresources.html" title="Resources" aria-haspopup="true">Resources</a>
+                    <ul>
+                        <li><a href="#">Resource 1</a></li>
+                        <li><a href="#">Resource 2</a></li>
+                        <li><a href="#">Resource 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="ACCabout.html" title="Info">About Us</a></li>
+                <li><a href="ACCcontact.html" title="Contact">Contact Us</a>
+                </li>
+            </ul>
+        </section>
+
+    </div>
+	<section id="projects">
+		<div id="project1">
+			<h2> Event Me </h2>
+			<img src="Images/Expand.png">
+		</div>
+		<div id="project2">
+			<h2> Website </h2>
+			<img src="Images/Expand.png">
+		</div>
+		<div id="project3">
+			<h2> Other </h2>
+			<img src="Images/Expand.png">
+		</div>
+	</section>
+    <div class="footer">
+        &copy; ACC <br>
+        <p class="social-links">
+            Stay Connected with Aggie Coding Club
+            <br>
+            <a href="https://twitter.com/ACC" target="_blank">
+                <img src="http://www.hdicon.com/wp-content/uploads/2011/07/twitter_icon_2011.png"
+                     alt="icon" title="twitter icon" width="60" height="60"
+                     border="1px"/>
+            </a>
+            <a href="https://www.facebook.com/aggiecodingclub" target="_blank">
+                <img src="http://2yu5yy2vwpsr4dg1ys3jha9o.wpengine.netdna-cdn.com/wp-content/uploads/2015/07/fb-square.png"
+                     alt="icon" title="fb icon" width="40" height="40"
+                     border="1px"/>
+            </a>
+        </p>
+
+    </div>
+</div>
+
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/projectexpand.js"></script>
+</body>
 </html>
