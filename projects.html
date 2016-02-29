@@ -3,18 +3,26 @@
 	<head>
 		<title> Aggie Coding Club </title>
         <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+		<!--<link rel="stylesheet" type="text/css" media="screen" href="css/main.css">-->
         <script type="text/javascript" src="JavaScript.js"></script>
 	</head>
 	<body>
-		<nav>
-			<ul class="nav-bar">
+	<div id="wrapper">
+		<div id="header">
+        <!--<img style="float:right" src="acc.jpeg" alt="description" title="acc-logo" width="70" height="70" />-->
+        <div id="title_logo">
+            <h1>Aggie Coding Club</h1>
+        </div>
+        <section class="nav">
+            <ul>
                 <li><a href="index.html">Home</a></li>
-				<li><a href="#">Portfolio</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="about.html">About Us</a></li>
-			</ul>
-		</nav>
+                <li><a href="ACCprojects.html" title="Projects" aria-haspopup="true">Projects</a></li>
+                <li><a href="ACCresources.html" title="Resources" aria-haspopup="true">Resources</a></li>
+                <li><a href="ACCabout.html" title="Info">About Us</a></li>
+                <li><a href="ACCcontact.html" title="Contact">Contact Us</a>
+                </li>
+            </ul>
+			</section>
 		<main>
             <div class="Projects-Container">
                 <div class="Project" id="p1">
@@ -44,9 +52,8 @@
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <div class="Proj-Title">EventMe<button class="Proj-Expand" id="e1"><img class="Proj-Expand" src="Images/expand-button.png" /></button></div>
-                    </div>
+                        <h1 class="Proj-Title">EventMe</h1>
+						<button class="Proj-Expand" id="e1"><img class="Proj-Expand" src="Images/Expand.png" /></button>
                 </div>
                 <div class="Project" id="p2">
                     <img class="Proj-Pic" src="Images/logoSquare.png" />
@@ -75,14 +82,10 @@
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <div class="Proj-Title">
-                            ACC Website
-                            <button class="Proj-Expand" id="e2">
-                                <img class="Proj-Expand" src="Images/expand-button.png" />
+                        <h1 class="Proj-Title"> ACC Website </h1>
+						<button class="Proj-Expand" id="e2">
+                                <img class="Proj-Expand" src="Images/Expand.png" />
                             </button>
-                        </div>
-                    </div>
                 </div>
                 <div class="Project kill" id="p3">
                     <img class="Proj-Pic" src="Images/Grover-Cleveland.jpg" />
@@ -112,15 +115,17 @@
                         </div>
                     </div>
                     <div>
-                        <div class="Proj-Title">
+                        <h2 class="Proj-Title">
                             Soccer Tracker App
                             <button class="Proj-Expand" id="e3">
-                                <img class="Proj-Expand" src="Images/expand-button.png" />
+                                <img class="Proj-Expand" src="Images/Expand.png" />
                             </button>
-                        </div>
+                        </h2>
                     </div>
                 </div>
             </div>
 		</main>
+	</div>
 	</body>
 </html>
+
