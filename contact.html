@@ -1,31 +1,95 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title> Aggie Coding Club </title>
-	</head>
-	<body>
-		<header>
-			<h1> Aggie Coding Club </h1>
-			<img src ="Images/Logo.png" />
-		</header>
-		<nav>
-			<ul>
-				<a href = "ACCmain.html"> <li> Home </li> </a>
-				<a href = "ACCabout.html"><li> About Us </li> </a>
-				<li> Contact </li>
-				<a href = "ACCresources.html"><li> Resources </li> </a>
-				<a href = "ACCportfolio.html"><li> Portfolio </li> </a>
-			</ul>
-		</nav>
-		<main>
-			<h2> Contact </h2>
-			<ul>
-			<li> Bob Smith </li>
-				<ul>
-				<li>Phone: 555-555-5555 </li>
-				<li>Email: Blah@blah.com </li>
-				</ul>
-			</ul>
-		</main>
-	</body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="shortcut icon" href="Images/smiley.png">
+    <script src="jss/script.js"></script>
+</head>
+
+<body>
+    <div>
+
+        <nav>
+            <ul class="nav-bar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </nav>
+
+        <aside>
+            <h2>Sidebar</h2>
+        </aside>
+
+        <article class="main">
+            <!--            <img src="http://placehold.it/100x100">-->
+            <h2>Contact Us</h2>
+            <p id="Intro-para">Help us learn more about you by filling out our interest form. Connect with us on social media as well to see all that we do.</p>
+            <div class="social_media_links">
+                <a target="_blank" href="https://www.facebook.com/zac.steer.3?fref=ts"><img src="Images/Facebook.png"></a>
+                <a target="_blank" href="https://twitter.com/steerbait"><img src="Images/Twitter.jpg"></a>
+                <a target="_blank" href="https://www.linkedin.com/company/1418841?trk=tyah&trkInfo=clickedVertical%3Acompany%2CclickedEntityId%3A1418841%2Cidx%3A2-1-4%2CtarId%3A1455263101881%2Ctas%3AGithub"><img src="Images/LinkedIn.jpg"></a>
+
+            </div>
+
+            <h3 id="Interest-Form-Header">Interest Form</h3>
+            <div class="message-form">
+                <form action="process.php">
+
+                    <p>
+                        <label for="Name">Name: </label>
+                        <input name="Name" type="text" placeholder="First, Last Name">
+                    </p>
+
+                    <p>
+                        <label for="Email">Email: </label>
+                        <input name="Email" type="email" placeholder="ACC@gigem.com">
+                    </p>
+
+                    <p>
+                        <label for="Classification">Classification: </label>
+                        <select>
+                            <option value="Freshman">Freshman</option>
+                            <option value="Sophomore">Sophomore</option>
+                            <option value="Junior">Junior</option>
+                            <option value="Senior">Senior</option>
+                            <option value="Grad Student">Grad Student</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="GPA">GPA: </label>
+                        <input name="GPA" type="number" placeholder="6.9">
+                    </p>
+
+                    <p>
+                        <label for="MessageOfText">Message</label>
+                        <textarea name="MessageOfText" id="MessageOfText" cols="30" rows="5" placeholder="Tell us what you are curious about or what brought you here"></textarea>
+                    </p>
+
+                    <p>
+                        <input id="submit" type="submit">
+                    </p>
+
+
+                </form>
+
+            </div>
+
+            <div class="email-link">
+                <p>Or simply email us at: <a href="mailto:aggiecodingclub@gmail.com">aggiecodingclub@gmail.com</a></p>
+            </div>
+        </article>
+
+        <footer class="footer">
+            &copy; ACC Website | Partially Designed By:
+            <a href="https://twitter.com/steerbait">Zac Steer</a>
+        </footer>
+    </div>
+</body>
+
 </html>
