@@ -117,3 +117,22 @@ aside {
     color:#FFDF00;
     text-decoration: none;
 }
+
+.nav-bar{
+    background:#500000;
+    list-style-type:none;
+    width:100%;
+    height:60px;
+}
+.nav-bar li{
+    background:#500000;
+    color:white;
+    width:15%;
+    margin-bottom:20px;
+    margin-top:20px;
+    float:left;
+}
+
+.nav-bar li a{
+    color:white;
+}
