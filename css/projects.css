@@ -7,7 +7,7 @@ html {
     /*top-bottom, left-right*/
     margin: 0 0;
     position: relative;
-    /*background-color: #E3E3E3;*/
+    background-color: #E3E3E3;
     height: 100%;
     padding: 0;
 }
@@ -25,7 +25,8 @@ body {
 
 div#header {
     /*semi-transparent background for better text readability*/
-    background-color: rgba(20,20,20,0.5);
+    background-color: rgb(80,0,0);
+	height: 5em;
 }
 
 div#header h1 {
@@ -43,6 +44,7 @@ section.nav {
     right: 0;
     padding: 10px 10px 0 0;
     clear: both;
+
     /*background-color: #8F8F8C;*/
 }
 
@@ -59,12 +61,14 @@ section.nav ul {
     padding: 0;
     display: inline-block;
     float: right;
+
 }
 
 section.nav ul li {
     /*so that the items appear all on the same line*/
     float: left;
     margin: 8px;
+
 }
 
 /*section.nav ul li a:after {*/
@@ -74,10 +78,6 @@ section.nav ul li a[aria-haspopup="true"]::after {
     width: 0;
     height: 0;
     margin-left: 5px;
-    /*CSS arrow*/
-    border-top: 6px solid transparent;
-    border-bottom: 6px solid transparent;
-    border-left: 6px solid #000000;
 }
 
 section.nav ul ul {
@@ -106,10 +106,10 @@ section.nav ul li:hover > ul li a {
 }
 
 section.nav ul li a {
-    background-color: #fff;
+    background-color: transparent;
     display: block;
     padding: 12px;
-    color: #000;
+    color: #fff;
     text-decoration: none;
     font-weight: 700;
     font-size: 1.2em;
@@ -133,69 +133,160 @@ h2 + p {
     margin-top: 4px;
 }
 
-a.btn {
-    font-size: 1.2em;
-    text-decoration: none; /*no underline*/
-    color: #000;
-    border: 1px solid #000;
-    /*padding between text and border*/
-    /*top-bottom left-right*/
-    padding: 2px 10px;
-    line-height: 2;
-}
-
-a.btn:hover {
-    background-color: rgba(0, 0, 0, .3);
-    /*transition time whenever background color changes*/
-    transition: background-color .25s;
-}
-
-div.News {
-    background-color: #C0C0C0;
-    display: inline-block;
-    position: absolute;
-    /*top: 150px;*/
-    margin-top: 70px;
-    /*opacity: .5;*/
-    max-width: 800px;
-    max-height: 500px;
-    margin-left: 50px;
-    padding: 15px;
-}
-
-div.Events {
-    background-color: #C0C0C0;
-    display: inline-block;
-    position: absolute;
-    /*top: 200px;*/
-    margin-top: 70px;
-    max-height: 500px;
-    right: 50px;
-    padding: 15px;
-    /*max-width: 800px;*/
-    /*margin-right: 20px;*/
-
-}
-
 div.footer {
-
     position: absolute;
     bottom: 5px;
 }
 
-img {
-
-    margin-left: auto;
-    margin-right: auto;
+.Project{
+    width: 45%;
+    float: left;
+	box-shadow: 10px 10px 10px #888888;
+    margin-right: 1%;
+    margin-left: 1%;
+	background-color: white;
+	color: black;
 }
+
+.Projects-Container{
+	position: relative;
+	top: -4em;
+    height:auto;
+    width: inherit;
+	height: 100em;
+    margin: 150px;
+    overflow: auto;
+
+}
+
+img.Proj-Pic{
+    width: 100%;
+    height:auto;
+}
+
+.Proj-Title{
+	position: relative;
+	left: .5em;
+	bottom: -.5em;
+	width: 60%;
+	margin: 0;
+	float:left;
+}
+
+.Proj-expanded .Proj-Pic{
+    display:none;
+	position: absolute;
+	top: 1em;
+}
+
+.tab-container{
+    display:none;
+}
+
+.Proj-expanded .tab-container{
+    display:block;
+}
+
+img.Proj-Expand{
+    width: 5em;
+	height: 5em;
+}
+button.Proj-Expand{
+	position: relative;
+	right: .5em;
+    width:5em;
+	height: 5em;
+    float:right;
+	background-color: transparent;
+	border: none;
+}
+
+.Proj-hidden{
+    display:none;
+}
+
+.Proj-expanded{
+    width:99%;
+    margin:0;
+}
+
+.Proj-expanded button.Proj-Expand {
+    width: 5%;
+}
+
+.tab-links {
+  background: #500000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  margin: 0 0 25px; 
+  list-style-type:none;
+}
+
+.tab-links li {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1; 
+
+}
+.tab-links a {
+    border-bottom: 3px solid transparent;
+    height: 40px;
+    font-size: 1rem;
+    line-height: 40px;
+    padding: 0 10px;
+    -webkit-transition: border .225s ease,      
+    color .225s ease;
+            transition: border .225s ease,      
+    color .225s ease;
+    will-change: border, color;
+    color: rgba(255, 255, 255, 0.8);
+}
+.tab-links a:hover {
+    color: #fff;
+}
+.tab-links a:hover, .tab-links a.active {
+    border-color: rgba(255, 255, 255, 0.7);
+    color: #fff; 
+
+}
+
+.tab{
+    display:none;
+}
+
+.active-content{
+    display: block;
+}
+
+
+.club-logo{
+    
+}
+
+.kill{
+    display:none !important;
+}
+
+
+
 
 /*footer
-footer {
-	padding: 0 20px;
-	padding-bottom: 20px;
-	background-color: #fff;
-}
-*/
+ * footer {
+ * 	padding: 0 20px;
+ * 		padding-bottom: 20px;
+ * 			background-color: #fff;
+ * 			}
+ * 			*/
 
 /*mobile devices*/
 @media screen and (max-width: 600px) {
@@ -228,29 +319,6 @@ footer {
         height: 100%;
     }
 
-    div.News {
-        background-color: #C0C0C0;
-        display: inline-block;
-        position: absolute;
-        top: 20px;
-        /*opacity: .5;*/
-        max-width: 80px;
-        height: 50px;
-        margin-left: 50px;
-    }
-
-    div.Events {
-        background-color: #C0C0C0;
-        display: inline-block;
-        position: absolute;
-        top: 200px;
-        max-height: 500px;
-        right: 50px;
-
-        /*max-width: 800px;*/
-        /*margin-right: 20px;*/
-
-    }
 
     section.nav ul {
         display: flex;
@@ -268,4 +336,4 @@ footer {
     section.main {
         padding: 0 10px;
     }
-}
+} 
