@@ -1,29 +1,150 @@
 <!DOCTYPE html>
+<!--
+	Apparently 'details' is only supported in chrome and
+	safari, so need to use javascript/jquery to replace
+-->
 <html>
 	<head>
 		<title> Aggie Coding Club </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="The webpage for the Aggie Coding Club"></meta>
-		<link rel="icon" href="http://www.saturdaydownsouth.com/wp-content/uploads/2014/09/revv-650x342.jpg"></link>
+		<link rel='icon' href='Images/Logo.png'></link>
+		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script>
+			$('summary').click(function(){
+				$(this).find('.resource').toggle();
+				console.log("hello i am debugging");
+			});
+		</script>-->
+		<style>
+		
+		/*
+		CSS for this page will go here until we have
+		a standard file for the whole site
+		*/
+		
+		details
+		{
+			padding: 5px;
+		}
+		
+		details:hover
+		{
+			background-color: yellow;
+		}
+		
+		/*
+		.resource
+		{
+			display: none;
+		}
+		*/
+		
+		footer
+		{
+			font-size: 0.75em;
+			text-align: center;
+			clear: both;
+			padding-top: 50px;
+			color: #ccc;
+		}		
+		
+		#fb
+		{
+			width: 20px;
+			height: 20px;
+			margin: 0 5px;
+		}
+	
+		</style>
 	</head>
 	<body>
 		<header>
 			<h1> Aggie Coding Club </h1>
 			<img src ="Images/Logo.png" />
 		</header>
+		
 		<nav>
 			<ul>
-				<a href = "ACCmain.html"> <li> Home </li> </a>
-				<a href = "ACCabout.html"><li> About Us </li> </a>
-				<a href = "ACCcontact.html"><li> Contact </li> </a>
-				<a href = "ACCportfolio.html"><li> Portfolio </li> </a>
+				<a href = "index.html"> <li> Home </li> </a>
+				<a href = "about.html"><li> About Us </li> </a>
+				<a href = "contact.html"><li> Contact </li> </a>
+				<a href = "portfolio.html"><li> Portfolio </li> </a>
 				<li> Resources </li>
 			</ul>
 		</nav>
+		
 		<main>
 			<h2> Resources </h2>
-			<ul>
-			<a href="google.com"/><li>Google.com</li></a>
+			
+			<details><summary>General resources</summary>
+			<ul class='resource'>
+				<li><a href='https://teamtreehouse.com/'>Teamtreehouse.com</a></li>
+				<li><a href='http://stackoverflow.com/'>Stackoverflow.com</a></li>
+				<li><a href='https://www.google.com/'>Google.com</a></li>
 			</ul>
+			</details>
+			
+			<details><summary>C++ resources</summary>
+			<ul class='resource'>
+				<li><a href='http://www.cplusplus.com/'>cplusplus.com</a></li>
+				<li><a href='http://cpp.sh/'>C++ shell</a></li>
+			</ul>
+			</details>
+			
+			<!--
+			<ul><h3>Java resources</h3>
+				<li>Idk some textbook somewhere</li>
+			</ul>
+			-->
+			
+			<details><summary>Web development resources</summary>
+			<ul class='resource'>
+				<li><a href='https://developer.mozilla.org/en-US/Learn'>Introduction to web development</a></li>
+				<li><a href='http://www.w3schools.com/html/default.asp'>w3schools HTML information</a></li>
+				<li><a href='https://developer.mozilla.org/en-US/docs/Web/HTML'>Mozilla.org HTML information</a></li>
+			</ul>
+			</details>
+			
+			<details><summary>JavaScript resources</summary>
+			<ul class='resource'>
+				<li><a href='http://www.w3schools.com/js/default.asp'>w3schools.com/js</a></li>
+				<li><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript'>Mozilla.org</a></li>
+				<li><a href='https://www.javascript.com/'>javascript.com</a></li>
+			</ul>
+			</details>
+
+			<details><summary>Swift resources</summary>
+			<ul class='resource'>
+				<li>
+				<a href='https://developer.apple.com/library/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/index.html#//apple_ref/doc/uid/TP40015214-CH2-SW1'>Swift Tutorial</a></li>
+				<li><a href='https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/'>The Swift Programming Language</a></li>
+				<li><a href='http://carlosicaza.com/swiftbooks/SwiftLanguage.pdf'>The Swift Programming Language (pdf)</a></li>
+			</ul>
+			</details>
+			
+			<details><summary>C# resources</summary>			
+			<ul class='resource'>
+				<li><a href='https://www.caveofprogramming.com/c-sharp-tutorial/basic-c-programming-test-your-knowledge-2.html'>C# Tutorial</a></li>
+				<li><a href='https://www.caveofprogramming.com/c-sharp-tutorial/c-for-beginners-make-your-own-mp3-player-free.html'>Tutorial to make a basic MP3 player</a></li>
+			</ul>
+			</details>
+			
+			<details><summary>Haskell resources</summary>			
+			<ul class='resource'>
+				<li><a href='http://learnyouahaskell.com/introduction#about-this-tutorial'>Learn You a Haskell</a></li>
+			</ul>
+			</details>
+			
 		</main>
+		
+		<footer>
+			<p>&copy; ACC</p>
+			<br></br>
+			<a href='https://www.facebook.com/aggiecodingclub'><img id='fb' src='https://www.facebook.com/images/fb_icon_325x325.png'/></a>
+			<!--Maybe put some more information down here-->
+		</footer>
+		
 	</body>
 </html>
+<!--Matt Gaikema-->
