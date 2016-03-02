@@ -1,6 +1,137 @@
-﻿body {
-    background #F4F4F4;
-    margin:0;
+﻿@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    max-width: auto;
+    font-size: 16px;
+    /*top-bottom, left-right*/
+    margin: 0 0;
+    position: relative;
+    background-color: #E3E3E3;
+    height: 100%;
+    padding: 0;
+}
+
+.wrapper{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+}
+
+
+body {
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100%;
+    overflow-x: scroll;
+}
+
+div#header {
+    /*semi-transparent background for better text readability*/
+    background-color: rgb(80,0,0);
+    height: 100px;
+    min-width: 1000px;
+}
+
+div#header h1 {
+    display: inline-block;
+}
+
+div#header div#title_logo {
+    display: inline-block;
+    padding: 0 0  0 20px;
+}
+
+section.nav {
+    width: 50%;
+    min-width: 500px;
+    height: 100px;
+    display: inline-block;
+    float: right;
+    right: 0;
+    padding: 10px 10px 0 0;
+    clear: both;
+
+}
+
+section.nav::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+section.nav ul {
+    /*remove bullets*/
+    width: 50%;
+    min-width: 600px;
+    height: 100px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    float: right;
+
+}
+
+section.nav ul li {
+    /*so that the items appear all on the same line*/
+    float: left;
+    margin: 8px;
+
+}
+
+/*section.nav ul li a:after {*/
+section.nav ul li a[aria-haspopup="true"]::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 5px;
+}
+
+section.nav ul ul {
+    /*second menu level*/
+    /*don't show by default*/
+    display: none;
+    /*absolute positioned so that it doesn't count toward parent element size*/
+    position: absolute;
+}
+section.nav ul li:hover > ul {
+    /*show when parent is hovered*/
+    display: block;
+    /*make these display above the rest of the page*/
+    z-index: 3;
+}
+section.nav ul li:hover > ul li {
+    display: block;
+    /*make them not all bunch to one side*/
+    float: none;
+    margin: 0;
+}
+section.nav ul li:hover > ul li a {
+    /*hoverd sub-list*/
+    /*constant width so they all line up*/
+    width: 125px;
+}
+
+section.nav ul li a {
+    background-color: transparent;
+    display: block;
+    padding: 12px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 100%;
+}
+
+section.nav ul li a:hover {
+    background-color: #aaa;
+    transition: background-color .25s;
 }
 
 .container {
@@ -9,13 +140,7 @@
     background: #FFF;
     
 }
-.header {
-    padding: 40px 0 20px 40px;
-    border: 2px solid black;
-    /*border-radius: 20px;*/
-    text-align: center;
-    
-}
+
 
 .menu {
     background: #336699;
@@ -49,15 +174,17 @@ aside {
     font-family: "Georgia";
 }
 .main {
-    margin: 0 0 0 180px;
+    width: 30.5em;
+    margin: auto;
     text-align: justify;
     line-height: 17px;
     font-family: "Georgia";
-    font-size: 13px;
+    font-size: 13px:
+
 }
 
-.email-link a:hover{
-    opacity: .8;
+.main p {
+    color: black;
 }
 
 .social_media_links a img{
@@ -74,9 +201,12 @@ aside {
 }
 
 .message-form {
-    width: 400px;
-    height: 375px;
+    margin-top: 30px;
+    width: 450px;
+    height: 600px;
     border: 2px solid;
+    color: black;
+    background-color: white;
 }
 .message-form input{
     width: 98%;
@@ -116,23 +246,4 @@ aside {
     font-family: "Lucida Sans Unicode";
     color:#FFDF00;
     text-decoration: none;
-}
-
-.nav-bar{
-    background:#500000;
-    list-style-type:none;
-    width:100%;
-    height:60px;
-}
-.nav-bar li{
-    background:#500000;
-    color:white;
-    width:15%;
-    margin-bottom:20px;
-    margin-top:20px;
-    float:left;
-}
-
-.nav-bar li a{
-    color:white;
 }

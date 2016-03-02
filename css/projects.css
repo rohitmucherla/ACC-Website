@@ -39,6 +39,8 @@ div#header div#title_logo {
 }
 
 section.nav {
+    width: 50%;
+    min-width: 100px;
     display: inline-block;
     float: right;
     right: 0;
