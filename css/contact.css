@@ -34,7 +34,7 @@ body {
 div#header {
     /*semi-transparent background for better text readability*/
     background-color: rgb(80,0,0);
-    height: 100px;
+    height: 80px;
     min-width: 1000px;
 }
 
