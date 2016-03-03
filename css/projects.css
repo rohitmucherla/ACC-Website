@@ -12,6 +12,13 @@ html {
     padding: 0;
 }
 
+.wrapper{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+}
+
+
 body {
     font-size: 16px;
     font-weight: 400;
@@ -26,7 +33,8 @@ body {
 div#header {
     /*semi-transparent background for better text readability*/
     background-color: rgb(80,0,0);
-	height: 5em;
+    height: 80px;
+    min-width: 1000px;
 }
 
 div#header h1 {
@@ -39,13 +47,15 @@ div#header div#title_logo {
 }
 
 section.nav {
+    width: 50%;
+    min-width: 500px;
+    height: 100px;
     display: inline-block;
     float: right;
     right: 0;
     padding: 10px 10px 0 0;
     clear: both;
 
-    /*background-color: #8F8F8C;*/
 }
 
 section.nav::after {
@@ -56,6 +66,9 @@ section.nav::after {
 
 section.nav ul {
     /*remove bullets*/
+    width: 50%;
+    min-width: 600px;
+    height: 100px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -112,7 +125,7 @@ section.nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: 700;
-    font-size: 1.2em;
+    font-size: 100%;
 }
 
 section.nav ul li a:hover {
@@ -120,26 +133,8 @@ section.nav ul li a:hover {
     transition: background-color .25s;
 }
 
-section.main {
-    padding: 0 20px 40px 20px;
-    background-color: #fff;
-}
-
-h2 {
-    margin-bottom: 4px;
-}
-
-h2 + p {
-    margin-top: 4px;
-}
-
-div.footer {
-    position: absolute;
-    bottom: 5px;
-}
-
 .Project{
-    width: 45%;
+    width: 30%;
     float: left;
 	box-shadow: 10px 10px 10px #888888;
     margin-right: 1%;
@@ -153,9 +148,7 @@ div.footer {
 	top: -4em;
     height:auto;
     width: inherit;
-	height: 100em;
     margin: 150px;
-    overflow: auto;
 
 }
 

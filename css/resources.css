@@ -1,4 +1,4 @@
-﻿@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
 html {
     font-family: 'Open Sans', sans-serif;
@@ -134,116 +134,24 @@ section.nav ul li a:hover {
     transition: background-color .25s;
 }
 
-.container {
-    width:780px;
-    margin: 0 auto;
-    background: #FFF;
-    
+details {
+    padding: 5px;
+}
+        
+details:hover{
+    background-color: yellow;
 }
 
-
-.menu {
-    background: #336699;
-    padding: 5px 0 6px 40px; /*Up Down Right Left*/
-    
-}
-
-.menu a{
-    color: #FFDF00;
-    text-decoration: none;
-    font-size: 15px;
-    font-family: "Arial", "Myriad Pro";
-}
-
-.menu a:hover{
-    color: #FFF4AA;
-}
-
-aside {
-    float:left;
-    width: 150px;
-    padding-top: 10px;
-    padding-right: 0;
-    padding-left: 0;
-    padding-bottom: 10px;
-    
-}
-
-#Intro-para {
-    width: 400px;
-    font-family: "Georgia";
-}
-.main {
-    width: 30.5em;
-    margin: auto;
-    text-align: justify;
-    line-height: 17px;
-    font-family: "Georgia";
-    font-size: 13px:
-
-}
-
-.main p {
-    color: black;
-}
-
-.social_media_links a img{
-    border-radius: 7px;
-    width: 30px;
-}
-
-.social_media_links a img:hover{
-    opacity: .5;
-}
-
-#Interest-Form-Header {
-/*    text-align: center*/
-}
-
-.message-form {
-    margin-top: 30px;
-    width: 450px;
-    height: 600px;
-    border: 2px solid;
-    color: black;
-    background-color: white;
-}
-.message-form input{
-    width: 98%;
-    border-radius: 5px;
-    background-color:beige;
-}
-
-
-
-.message-form select {
-    width: 99.5%;
-    background-color: beige;
-}
-
-.message-form textarea {
-    width: 98%;
-    background-color: beige;
-}
-
-#submit {
-    margin-left: 50px;
-    width:75%;
+footer{
+    font-size: 0.75em;
     text-align: center;
-}
-
-.footer {
-    font-size: 10px;
-    font-family: "Lucida Sans Unicode";
-    color: #FFDF00;
-     background-color:grey;
-    padding: 3px 10px;
-    
-}
-
-.footer a {
-    font-size: 10px;
-    font-family: "Lucida Sans Unicode";
-    color:#FFDF00;
-    text-decoration: none;
+    clear: both;
+    padding-top: 50px;
+    color: #ccc;
+}       
+        
+#fb{
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
 }

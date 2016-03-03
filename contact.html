@@ -9,33 +9,41 @@
 </head>
 
 <body>
-    <div>
+    <div id="wrapper">
 
-        <nav>
-            <ul class="nav-bar">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="#">About Us</a></li>
-            </ul>
-        </nav>
+        <div id="header">
+            <!--<img style="float:right" src="acc.jpeg" alt="description" title="acc-logo" width="70" height="70" />-->
+            <div id="title_logo">
+                <h1>Aggie Coding Club</h1>
+            </div>
+            <section class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html" title="Projects">Projects</a></li>
+                    <li><a href="resources.html" title="Resources">Resources</a></li>
+                    <li><a href="about.html" title="Info">About Us</a></li>
+                    <li><a href="contact.html" title="Contact">Contact Us</a>
+                    </li>
+                </ul>
+            </section>
+        </div>
 
        
 
-        <article class="main">
+        <div class="main">
             <!--            <img src="http://placehold.it/100x100">-->
-            <h2>Contact Us</h2>
-            <p id="Intro-para">Help us learn more about you by filling out our interest form! Also be sure to connect with us on social media.</p>
-            <div class="social_media_links">
-                <a target="_blank" href="https://www.facebook.com/aggiecodingclub/?fref=ts"><img src="Images/Facebook.png"></a>
-               <!-- <a target="_blank" href="https://twitter.com/steerbait"><img src="Images/Twitter.jpg"></a> -->
-               <!-- <a target="_blank" href="https://www.linkedin.com/company/1418841?trk=tyah&trkInfo=clickedVertical%3Acompany%2CclickedEntityId%3A1418841%2Cidx%3A2-1-4%2CtarId%3A1455263101881%2Ctas%3AGithub"><img src="Images/LinkedIn.jpg"></a> -->
 
-            </div>
-
-            <h3 id="Interest-Form-Header">Interest Form</h3>
             <div class="message-form">
+                <h2>Contact Us</h2>
+                <p id="Intro-para">Help us learn more about you by filling out our interest form! Also be sure to connect with us on social media.</p>
+                <div class="social_media_links">
+                    <a target="_blank" href="https://www.facebook.com/aggiecodingclub/?fref=ts"><img src="Images/Facebook.png"></a>
+                    <!-- <a target="_blank" href="https://twitter.com/steerbait"><img src="Images/Twitter.jpg"></a> -->
+                    <!-- <a target="_blank" href="https://www.linkedin.com/company/1418841?trk=tyah&trkInfo=clickedVertical%3Acompany%2CclickedEntityId%3A1418841%2Cidx%3A2-1-4%2CtarId%3A1455263101881%2Ctas%3AGithub"><img src="Images/LinkedIn.jpg"></a> -->
+
+                </div>
+
+                <h3 id="Interest-Form-Header">Interest Form</h3>
                 <form action="process.php">
 
                     <p>
@@ -74,10 +82,11 @@
 
             </div>
 
-            <div class="email-link">
-                <p>Please note, the form may not currently work due to incremental website development. If you are interested please email us at: <a href="mailto:aggiecodingclub@gmail.com">aggiecodingclub@gmail.com</a></p>
-            </div>
-        </article>
+
+            <p>Please note, the form may not currently work due to incremental website development.
+                If you are interested please email us at: <a href="mailto:aggiecodingclub@gmail.com">aggiecodingclub@gmail.com</a></p>
+
+        </div>
 
         <footer class="footer">
             &copy; Aggie Coding Club | Page Designed By:

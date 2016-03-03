@@ -1,160 +1,135 @@
-.Project{
-    width: 45%;
-    float: left;
-    border: 2px solid black;
-    margin-right: 1%;
-    margin-left: 1%;
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    max-width: auto;
+    font-size: 16px;
+    /*top-bottom, left-right*/
+    margin: 0 0;
+    position: relative;
+    background-color: #E3E3E3;
+    height: 100%;
+    padding: 0;
 }
 
-.Projects-Container{
-    height:auto;
-    width: inherit;
-    margin: 150px;
-    overflow: auto;
+.wrapper{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
 }
 
-.About-Container{
-    height: auto;
-    width: inherit;
-    align-self: center;
-    align-content: center;
-    align: center;
-    margin: 150px;
-    overflow: auto;
-}
 
-.About-Container table{
-    table-layout: center;
-    width: 100%;
-    text-align: center;
-    border: none;
-    outline: none;
-    border-collapse: collapse;
-    padding: 10px;
-}
-
-img.Proj-Pic{
-    width: 100%;
-    height:auto;
-}
-
-.Proj-Title{
-    padding:20px;
-    font-size:200%;
-    font-weight:bold;
-    margin:0px;
-}
-
-.Proj-expanded .Proj-Pic{
-    display:none;
-}
-
-.tab-container{
-    display:none;
-}
-
-.Proj-expanded .tab-container{
-    display:block;
-}
-
-img.Proj-Expand{
-    width:100%;
-}
-button.Proj-Expand{
-    width:25%;
-    float:right;
-}
-
-.Proj-hidden{
-    display:none;
-}
-
-.Proj-expanded{
-    width:99%;
-    margin:0;
-}
-
-.Proj-expanded button.Proj-Expand {
-    width: 5%;
-}
-
-.tab-links {
-  background: #500000;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-      -ms-flex-wrap: nowrap;
-          flex-wrap: nowrap;
-  margin: 0 0 25px; 
-  list-style-type:none;
-}
-
-.tab-links li {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-        -ms-flex: 1;
-            flex: 1; 
-
-}
-.tab-links a {
-    border-bottom: 3px solid transparent;
-    height: 40px;
-    font-size: 1rem;
-    line-height: 40px;
-    padding: 0 10px;
-    -webkit-transition: border .225s ease,      
-    color .225s ease;
-            transition: border .225s ease,      
-    color .225s ease;
-    will-change: border, color;
-    color: rgba(255, 255, 255, 0.8);
-}
-.tab-links a:hover {
+body {
+    font-size: 16px;
+    font-weight: 400;
     color: #fff;
+    margin: 0;
+    padding: 0;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100%;
+    overflow-x: scroll;
 }
-.tab-links a:hover, .tab-links a.active {
-    border-color: rgba(255, 255, 255, 0.7);
-    color: #fff; 
+
+div#header {
+    /*semi-transparent background for better text readability*/
+    background-color: rgb(80,0,0);
+    height: 80px;
+    min-width: 1000px;
+}
+
+div#header h1 {
+    display: inline-block;
+}
+
+div#header div#title_logo {
+    display: inline-block;
+    padding: 0 0  0 20px;
+}
+
+section.nav {
+    width: 50%;
+    min-width: 500px;
+    height: 100px;
+    display: inline-block;
+    float: right;
+    right: 0;
+    padding: 10px 10px 0 0;
+    clear: both;
 
 }
 
-.tab{
-    display:none;
-}
-
-.active-content{
+section.nav::after {
+    content: "";
     display: block;
+    clear: both;
 }
 
-.nav-bar{
-    background:#500000;
-    list-style-type:none;
-    width:100%;
-    height:60px;
-}
-.nav-bar li{
-    background:#500000;
-    color:white;
-    width:15%;
-    margin-bottom:20px;
-    margin-top:20px;
-    float:left;
+section.nav ul {
+    /*remove bullets*/
+    width: 50%;
+    min-width: 600px;
+    height: 100px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    float: right;
+
 }
 
-.nav-bar li a{
-    color:white;
+section.nav ul li {
+    /*so that the items appear all on the same line*/
+    float: left;
+    margin: 8px;
+
 }
 
-.club-logo{
-    
+/*section.nav ul li a:after {*/
+section.nav ul li a[aria-haspopup="true"]::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 5px;
 }
 
-.kill{
-    display:none !important;
+section.nav ul ul {
+    /*second menu level*/
+    /*don't show by default*/
+    display: none;
+    /*absolute positioned so that it doesn't count toward parent element size*/
+    position: absolute;
+}
+section.nav ul li:hover > ul {
+    /*show when parent is hovered*/
+    display: block;
+    /*make these display above the rest of the page*/
+    z-index: 3;
+}
+section.nav ul li:hover > ul li {
+    display: block;
+    /*make them not all bunch to one side*/
+    float: none;
+    margin: 0;
+}
+section.nav ul li:hover > ul li a {
+    /*hoverd sub-list*/
+    /*constant width so they all line up*/
+    width: 125px;
+}
+
+section.nav ul li a {
+    background-color: transparent;
+    display: block;
+    padding: 12px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 100%;
+}
+
+section.nav ul li a:hover {
+    background-color: #aaa;
+    transition: background-color .25s;
 }
