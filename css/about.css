@@ -22,7 +22,7 @@ html {
 body {
     font-size: 16px;
     font-weight: 400;
-    color: #fff;
+    color: #000;
     margin: 0;
     padding: 0;
     background-size: 100% 100%;
@@ -45,6 +45,7 @@ div#header h1 {
 div#header div#title_logo {
     display: inline-block;
     padding: 0 0  0 20px;
+    color: #fff;
 }
 
 section.nav {
