@@ -1,4 +1,4 @@
-﻿@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
 html {
     font-family: 'Open Sans', sans-serif;
@@ -212,6 +212,13 @@ aside {
     width: 98%;
     border-radius: 5px;
     background-color:beige;
+}
+.message-form input#MessageOfText {
+    width: 98%;
+    height: 20px;
+    border-radius: 5px;
+    background-color:beige;
+    
 }
 
 
