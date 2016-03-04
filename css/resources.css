@@ -22,9 +22,9 @@ html {
 body {
     font-size: 16px;
     font-weight: 400;
-    color: #fff;
+    color: #000000;
     margin: 0;
-    padding: 0;
+    padding: 3px;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     height: 100%;
@@ -45,6 +45,7 @@ div#header h1 {
 div#header div#title_logo {
     display: inline-block;
     padding: 0 0  0 20px;
+    color: #fff;
 }
 
 section.nav {
@@ -137,7 +138,7 @@ section.nav ul li a:hover {
 details {
     padding: 5px;
 }
-        
+
 details:hover{
     background-color: yellow;
 }
@@ -148,8 +149,8 @@ footer{
     clear: both;
     padding-top: 50px;
     color: #ccc;
-}       
-        
+}
+
 #fb{
     width: 20px;
     height: 20px;
