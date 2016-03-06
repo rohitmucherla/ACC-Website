@@ -15,7 +15,7 @@
     if(isset($_POST["MessageOfText"])) {
         $MessageOfText = "Message: " . $_POST["MessageOfText"];
     }
-    $sentMail = mail("steerzac@tamu.edu, aggiecodingclub@gmail.com", "ACC Website Interest Form", $FirstNameText. $LastNameText . $EmailText . $ClassificationText . $MessageOfText);
+    $sentMail = mail("rohit.mucherla@gmail.com", "ACC Website Interest Form", $FirstNameText. $LastNameText . $EmailText . $ClassificationText . $MessageOfText);
     if($sentMail) {
         echo "Contact form received. Thank you, " . $FirstName;
     } else {
