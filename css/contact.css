@@ -1,4 +1,4 @@
-﻿@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
 html {
     font-family: 'Open Sans', sans-serif;
@@ -206,15 +206,30 @@ aside {
     height: 600px;
     border: 2px solid;
     color: black;
-    background-color: white;
+    background-color: red;
+    /*FIXME to white*/
 }
 .message-form input{
     width: 98%;
     border-radius: 5px;
     background-color:beige;
+/*    FIXME to beige*/
+}
+.message-form input#MessageOfText {
+    width: 98%;
+    height: 20px;
+    border-radius: 5px;
+    background-color:beige;
+    
 }
 
-
+#submit {
+    margin-left: 50px;
+    width:75%;
+    text-align: center;
+    background-color: red;
+/*    FIXME to nothing*/
+}
 
 .message-form select {
     width: 99.5%;
@@ -224,12 +239,6 @@ aside {
 .message-form textarea {
     width: 98%;
     background-color: beige;
-}
-
-#submit {
-    margin-left: 50px;
-    width:75%;
-    text-align: center;
 }
 
 .footer {
