@@ -206,8 +206,7 @@ aside {
     height: 600px;
     border: 2px solid;
     color: black;
-    background-color: red;
-    /*FIXME to white*/
+    background-color: white;
 }
 .message-form input{
     width: 98%;
@@ -224,10 +223,11 @@ aside {
 }
 
 #submit {
-    margin-left: 50px;
-    width:75%;
+    margin-left: 185px;
+    width:40px;
+    height: 40px;
     text-align: center;
-    background-color: red;
+    border-radius: 100%;
 /*    FIXME to nothing*/
 }
 
