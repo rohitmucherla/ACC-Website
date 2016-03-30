@@ -11,6 +11,7 @@ body {
 /*navbar styles*/
 .navbar-default {
     background-color: #500000;
+    position: relative;
 }
 
 .navbar-default .navbar-brand {
@@ -30,10 +31,22 @@ body {
 }
 
 
-
 /*social buttons style*/
 .social_button img{
     padding:0 10px 10px 10px;
     height: 50px;
     width: 60px;
+}
+
+.footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #E2E2E2;
+  border-top: solid .5px #F1F1F1;
+}
+
+.footer .container p{
+    text-align: center;
 }
