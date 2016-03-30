@@ -1,0 +1,13 @@
+.projects{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.panel-group{
+	max-width: 1500px;
+}
+
+.panel-group h2{
+    position: relative;
+    left: 10px;
+}
