@@ -1,34 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+</link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/main.css">
 <head>
-	<title> Aggie Coding Club </title>
-	<link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css">
-	<link rel='icon' href='Images/Logo.png'></link>
+	<meta charset="UTF-8">
+	<title>Aggie Coding Club</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-	<nav class="navbar navbar-default">
+	<nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
         	<!-- Navbar header with ACC -->
 	        <div class="navbar-header">
-	            <h1 class="navbar-brand">Aggie Coding Club</h1>
+	        	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	            	<span class="sr-only">Toggle navigation</span>
+	            	<span class="icon-bar"></span>
+	            	<span class="icon-bar"></span>
+	            	<span class="icon-bar"></span>
+	         	</button>
+	         	<a class="navbar-brand" href="#index">Aggie Coding Club</a>
 	        </div>
-
-	        <!-- Navbar links -->
-	        <div class="collapse navbar-collapse">
-	            <ul class="nav navbar-nav">
-	                <li><a href="index.html">Home</a></li>
-	                <li><a href="projects.html" title="Projects">Projects</a></li>
-	                <li><a href="resources.html" title="Resources">Resources</a></li>
-	                <li><a href="about.html" title="Info">About Us</a></li>
-	                <li><a href="contact.php" title="Contact">Contact Us</a></li>
-	            </ul>
-	        </div>
+	        <div id="navbar" class="navbar-collapse collapse navbar-right">
+          		<ul class="nav navbar-nav">
+            		<li class="active nav-item"><a href="#">Home</a></li>
+            		<li class = "nav-item"><a href="#about">About</a></li>
+           			<li class = "nav-item"><a href="#resources">Resources</a></li>
+            		<li class = "nav-item"><a href="#projects">Projects</a></li>
+            		<li class = "nav-item"><a href="#contact">Contact</a></li>
+          		</ul>
+        	</div><!--/.nav-collapse -->
         </div>
     </nav>
-<main>
+
+<body>
 	<div class="container">
-		<h2> About Us </h2>
-		<p> Officers</p>
+		<h2>About Us</h2>
+		<h2>Officers</h2>
 		<center>
 		<table class="table">
 			<tr>
@@ -48,16 +56,15 @@
 				<td><h4><center>A.A. Tyler</center></h4></td>
 			</tr>
 			<tr>
-				<td><p>Chief Student Leader</p></td>
-				<td><p>Treasurer</p></td>
-				<td><p>Project Coordinator</p></td>
-				<td><p>Community Officer</p></td>
-				<td><p>Project Coordinator</p></td>
-				<td><p>Media Coordinator</p></td>
+				<td><p><center>Chief Student Leader</center></p></td>
+				<td><p><center>Treasurer</center></p></td>
+				<td><p><center>Project Coordinator</center></p></td>
+				<td><p><center>Community Officer</center></p></td>
+				<td><p><center>Project Coordinator</center></p></td>
+				<td><p><center>Media Coordinator</center></p></td>
 			</tr>
 		</table>
 	</center>
 	</div>
-</main>
 </body>
 </html>
