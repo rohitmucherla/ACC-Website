@@ -45,12 +45,12 @@
     $LastName = $_POST["LastName"];
     $Email = $_POST["Email"];
     $Phone = $_POST["Phone"];
-       
+
     $FirstNameText = "First Name: " . $FirstName . "\n";
     $LastNameText = "Last Name: " . $LastName . "\n";
     $EmailText = "Email: " . $Email . "\n";
     $PhoneText = "Phone: " . $Phone . "\n";
-       
+
     if(isset($_POST["Classification"])) {
         $Classification = $_POST["Classification"];
         $ClassificationText = "Classification: " . $Classification . "\n";
@@ -58,15 +58,15 @@
     if(isset($_POST["MessageOfText"])) {
         $MessageOfText = "Message: " . $_POST["MessageOfText"];
     }
-       
+
     if (mail ("steerzac@tamu.edu", "ACC Website Interest Form", $FirstNameText. $LastNameText . $EmailText . $ClassificationText . $PhoneText . $MessageOfText)) {
         echo '<div class="alert alert-success">Thank You! An officer will contact you shortly</div>';
     } else {
         echo '<div class="alert alert-danger">Sorry there was an error sending your message. We are working to fix the problem</div>';
     }
-}      
-       
-       
+}
+
+
 
 ?>
 
@@ -86,7 +86,7 @@
                         <input class="form-control" name="FirstName" type="text" placeholder="John" required>
                         </div>
                     </div>
-                    
+
                     <div class="form-group">
                         <label class="control-label col-sm-2" for="LastName">Last: </label>
                         <div class="col-sm-10">
@@ -95,7 +95,7 @@
                     </div>
 
                     <div class="form-group">
-                       
+
                         <label class="control-label col-sm-2" for="Email">Email: </label>
                         <div class="col-sm-10">
                         <input name="Email" class="form-control" id="email" type="email" placeholder="ACC@gigem.com" required>
@@ -148,7 +148,7 @@
             </div>
         </footer>
     </div>
-    
+
     </div>
     <script src="js/jquery-2.2.1.js"></script>
  	<script src="js/bootstrap.min.js"></script>
