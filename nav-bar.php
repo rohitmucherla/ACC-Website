@@ -1,5 +1,6 @@
 <?php
-require("common.php");
+//execute common code to connect to db and start session
+require("login_code/common.php");
 $nav_bar='
 <!-- Fixed navbar -->
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -14,11 +15,11 @@ $nav_bar='
   </div>
   <div id="navbar" class="navbar-collapse collapse navbar-right">
     <ul class = "nav navbar-nav">
-      <li class = "active nav-item"><a href="../index.php">Home</a></li>
-      <li class = "nav-item"><a href="../about.php">About</a></li>
-      <li class = "nav-item"><a href="../resources.php">Resources</a></li>
-      <li class = "nav-item"><a href="../projects.php">Projects</a></li>
-      <li class = "nav-item"><a href="../contact.php">Contact</a></li>';
+      <li class = "active nav-item"><a href="index.php">Home</a></li>
+      <li class = "nav-item"><a href="about.php">About</a></li>
+      <li class = "nav-item"><a href="resources.php">Resources</a></li>
+      <li class = "nav-item"><a href="projects.php">Projects</a></li>
+      <li class = "nav-item"><a href="contact.php">Contact</a></li>';
 
   if (!empty($_SESSION['user'])) {
     $nav_bar .='
@@ -29,17 +30,17 @@ $nav_bar='
         </button>
         <ul class="dropdown-menu">
         <!--allowed for all users because im sanitizing input and only accesses one database-->
-        <a href="../Management/project_submission.php">Submit Project</a><br />
+        <a href="Management/project_submission.php">Submit Project</a><br />
       ';
 
      //<!--allowed for less users because they can edit project information and are expected to know not to break things-->
      if ( ($_SESSION['user']['user_type']=="Administrator") || ($_SESSION['user']['user_type']=="Operator") ){
-        $nav_bar .= "<a href='../Management/update_home.php'>Update Info</a><br />";
+        $nav_bar .= "<a href='Management/update_home.php'>Update Info</a><br />";
      }
 
      //<!--allowed only for site Administrators because they can edit user information which is big security flaw.-->
      if ($_SESSION['user']['user_type']=="Administrator"){
-      $nav_bar .=  "<a href='../Management/edit_users.php'>Edit Users</a><br />";
+      $nav_bar .=  "<a href='Management/edit_users.php'>Edit Users</a><br />";
      }
     $nav_bar .=  '
         </ul>
@@ -54,8 +55,8 @@ $nav_bar='
        $nav_bar .=  '
         </button>
         <ul class="dropdown-menu">
-          <li class = "nav-item"><a href="edit_account.php">Preferences</a></li>
-          <li class = "nav-item"><a href="logout.php">Logout</a></li>
+          <li class = "nav-item"><a href="login_code/edit_account.php">Preferences</a></li>
+          <li class = "nav-item"><a href="login_code/logout.php">Logout</a></li>
         </ul>
       </div>
     </li>
