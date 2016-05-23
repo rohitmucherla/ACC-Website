@@ -1,3 +1,6 @@
+<?php
+  include 'nav-bar.php';
+?>
 <!DOCTYPE html>
 <!--
     Apparently 'details' is only supported in chrome and
@@ -17,34 +20,8 @@
 </head>
 <body>
 <div id="wrapper">
-    <nav class="navbar navbar-default navbar-fixed-top"
-         style="position: relative">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed"
-                        data-toggle="collapse" data-target="#navbar"
-                        aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Aggie Coding Club</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse navbar-right">
-                <ul class="nav navbar-nav">
-                    <li class="nav-item"><a href="index.html">Home</a></li>
-                    <li class="nav-item"><a href="about.html">About</a></li>
-                    <li class="active nav-item"><a href="resources.html">Resources</a>
-                    </li>
-                    <li class="nav-item"><a href="projects.html">Projects</a>
-                    </li>
-                    <li class="nav-item"><a href="contact.php">Contact</a></li>
-                </ul>
-            </div><!--/.nav-collapse -->
-        </div>
-    </nav>
 
+    <?php echo $nav_bar; ?>
 
     <div class="container">
 
@@ -131,13 +108,12 @@
 
     </div>
 
-    <footer style="text-align:center;">
-        <div style="display:table-cell;vertical-align:middle;">
-            <p>Aggie Coding Club 2016 | aggiecodingclub@gmail.com</p>
-        </div>
-        <div style="display:table-cell;vertical-align:middle;">
-            <p style="float:right;">&copy; ACC</p>
-        </div>
+    <footer>
+        <p>&copy; ACC</p>
+        <a class="social_button facebook_button" href='https://www.facebook.com/aggiecodingclub'>
+            <img id='fb'
+                 src='https://www.facebook.com/images/fb_icon_325x325.png'/>
+        </a>
         <!--Maybe put some more information down here-->
     </footer>
 
