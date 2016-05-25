@@ -15,7 +15,7 @@
 
  if (!empty($_POST)) {
 
-   $query = "SELECT id FROM Project_Ideas WHERE P_Name = :Project_Name";
+   $query = "SELECT id FROM Projects WHERE P_Name = :Project_Name";
    $query_params = array(':Project_Name' => $_POST['Project_Name']);
    try {
       // These two statements run the query against your database table.
@@ -30,7 +30,7 @@
     $row = $stmt->fetch();
     //if this project does not exist in db
     if (!$row) {
-      $query = "INSERT INTO Project_Ideas(P_Owner,Email,P_Name) VALUES(:Project_Owner,:Owner_Email,:Project_Name)";
+      $query = "INSERT INTO Projects(P_Owner,Email,P_Name) VALUES(:Project_Owner,:Owner_Email,:Project_Name)";
 
       $query_params = array(
        ':Project_Owner' => $_POST['Project_Owner'],
@@ -46,10 +46,10 @@
       catch(PDOException $ex) {
         // Note: On a production website, you should not output $ex->getMessage().
         // It may provide an attacker with helpful information about your code.
-        die("Failed to run query: " . $ex->getMessage());
+        die("Failed to run query: " );//. $ex->getMessage()
       }
 
-      $query = "SELECT id FROM Project_Ideas WHERE P_Name = :Project_Name";
+      $query = "SELECT id FROM Projects WHERE P_Name = :Project_Name";
       $query_params = array(':Project_Name'=>$_POST['Project_Name']);
       try {
         // These two statements run the query against your database table.
@@ -141,15 +141,15 @@
         				<th>Description</th>
         				<th>Skills Required</th>
 	           </tr>
-
+              <!--
 		          <tr>
-          			<!--table data-->
+          			table data
           			<td>Alyssa Tyler</td>
           			<td>iKandee</td>
           			<td>Mobile shopping app. Similar interface to Flipboard. WebViews that pull company websites.</td>
           			<td>Android, ios, possible server-side scripting</td>
         			</tr>
-
+              -->
 	          </table>
         </p>
 

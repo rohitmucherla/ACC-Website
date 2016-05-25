@@ -24,7 +24,7 @@
     {
         // Note: On a production website, you should not output $ex->getMessage().
         // It may provide an attacker with helpful information about your code.
-        die("Failed to run query: " . $ex->getMessage());
+        die("Failed to run query: " );//. $ex->getMessage()
     }
     //put rows into array
     $rows = $stmt->fetchAll();

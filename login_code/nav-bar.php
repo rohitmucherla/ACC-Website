@@ -61,6 +61,14 @@ $nav_bar='
     </li>
   ';
 }
+else {
+  $nav_bar.= '
+      <li class = "nav-item"><a href="login_code/login.php">
+        <button type="button" class="btn btn-primary btn-lg">Login</button>
+        </a>
+      </li>
+  ';
+}
 $nav_bar .='
   </div>
 </nav>'

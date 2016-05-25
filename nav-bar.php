@@ -29,8 +29,8 @@ $nav_bar='
           Management Tools<span class="caret"></span>
         </button>
         <ul class="dropdown-menu">
-        <!--allowed for all users because im sanitizing input and only accesses one database-->
-        <a href="Management/project_submission.php">Submit Project</a><br />
+          <!--allowed for all users because im sanitizing input and only accesses one database-->
+          <a href="Management/project_submission.php">Submit Project</a><br />
       ';
 
      //<!--allowed for less users because they can edit project information and are expected to know not to break things-->
@@ -60,6 +60,14 @@ $nav_bar='
         </ul>
       </div>
     </li>
+    ';
+  }
+else {
+  $nav_bar.= '
+      <li class = "nav-item"><a href="login_code/login.php">
+        <button type="button" class="btn btn-primary btn-lg">Login</button>
+        </a>
+      </li>
   ';
 }
 $nav_bar .='

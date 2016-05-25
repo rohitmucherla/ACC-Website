@@ -13,7 +13,7 @@ if (empty($_SESSION['user'])) {
 
   // Everything below this point in the file is secured by the login system
 
-  $query = "SELECT P.id,P.P_Owner,P.Email,P.P_Name,description_table.description,P.devs_Assigned,P.Skills FROM Project_Ideas AS P LEFT JOIN description_table ON description_table.id=P.id";
+  $query = "SELECT P.id,P.P_Owner,P.Email,P.P_Name,description_table.description,P.devs_Assigned,P.Skills FROM Projects AS P LEFT JOIN description_table ON description_table.id=P.id";
 
   try {
     // These two statements run the query against your database table.
@@ -23,7 +23,7 @@ if (empty($_SESSION['user'])) {
   catch(PDOException $ex) {
     // Note: On a production website, you should not output $ex->getMessage().
     // It may provide an attacker with helpful information about your code.
-    die("Failed to run query: " . $ex->getMessage());
+    die("Failed to run query: " );//. $ex->getMessage()
   }
   //put rows into array
   $rows = $stmt->fetchAll();
