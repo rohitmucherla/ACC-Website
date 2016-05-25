@@ -1,86 +1,96 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-</link rel="stylesheet" href="css/normalize.css">
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/main_v2.css">
-<link rel="stylesheet" href="css/about.css">
 <head>
     <meta charset="UTF-8">
     <title>Aggie Coding Club</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="stylesheet" href="css/normalize.css">-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main_v2.css">
+    <link rel="stylesheet" href="css/about.css">
 </head>
 <body>
-<nav class="navbar navbar-default navbar-fixed-top">
+
+<div id="wrapper">
+
+    <nav class="navbar navbar-default navbar-fixed-top"
+         style="position: relative">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed"
+                        data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Aggie Coding Club</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse navbar-right">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item"><a href="index.html">Home</a></li>
+                    <li class="active nav-item"><a href="about.html">About</a></li>
+                    <li class="nav-item"><a href="resources.html">Resources</a>
+                    </li>
+                    <li class="nav-item"><a href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item"><a href="contact.php">Contact</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+
     <div class="container">
-        <!-- Navbar header with ACC -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed"
-                    data-toggle="collapse" data-target="#navbar"
-                    aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#index">Aggie Coding Club</a>
+        <h2>About Us</h2>
+        <h2>Officers</h2>
+        <div class="box">
+            <img src="Images/about-us-photos/Michael.JPG" height="200"/>
+            <div class="center name"> Michael M.</div>
+            <div class="center title"> Chief Student Leader</div>
         </div>
-        <div id="navbar" class="navbar-collapse collapse navbar-right">
-            <ul class="nav navbar-nav">
-                <li class="nav-item"><a href="index.html">Home</a></li>
-                <li class="active nav-item"><a href="about.html">About</a></li>
-                <li class="nav-item"><a href="resources.html">Resources</a></li>
-                <li class="nav-item"><a href="projects.html">Projects</a></li>
-                <li class="nav-item"><a href="contact.php">Contact</a></li>
-            </ul>
-        </div><!--/.nav-collapse -->
-    </div>
-</nav>
-
-<body>
-<div class="container">
-    <h2>About Us</h2>
-    <h2>Officers</h2>
-    <div class="box">
-        <img src="Images/about-us-photos/Michael.JPG" height="200"/>
-        <div class="center name"> Michael M.</div>
-        <div class="center title"> Chief Student Leader</div>
-    </div>
-    <div class="box">
-        <img src="Images/about-us-photos/Dawson.JPG" height="200"/>
-        <div class="center name"> Dawson T.</div>
-        <div class="center title"> Treasurer</div>
-    </div>
-    <div class="box">
-        <img src="Images/about-us-photos/Liam.jpeg" height="200"/>
-        <div class="center name"> Liam M.</div>
-        <div class="center title"> Project Coordinator</div>
-    </div>
-    <div class="box">
-        <img src="Images/about-us-photos/colton.jpeg"
-             height="200"/>
-        <div class="center name"> Colton W.</div>
-        <div class="center title"> Community Officer</div>
-    </div>
-    <div class="box">
-        <img src="Images/about-us-photos/Will.JPG" height="200"/>
-        <div class="center name"> Will O.</div>
-        <div class="center title"> Project Coordinator</div>
-    </div>
-    <div class="box">
-        <img src="Images/about-us-photos/Alyssa.JPG" height="200"/>
-        <div class="center name"> A.A. Tyler</div>
-        <div class="center title"> Media Coordinator</div>
-    </div>
-
-    <footer style="text-align:center;">
-        <div style="display:table-cell;vertical-align:middle;">
-            <p>Aggie Coding Club 2016 | aggiecodingclub@gmail.com </p>
+        <div class="box">
+            <img src="Images/about-us-photos/Dawson.JPG" height="200"/>
+            <div class="center name"> Dawson T.</div>
+            <div class="center title"> Treasurer</div>
         </div>
-        <div style="display:table-cell;vertical-align:middle;">
-            <p style="float:right;">&copy; ACC</p>
+        <div class="box">
+            <img src="Images/about-us-photos/Liam.jpeg" height="200"/>
+            <div class="center name"> Liam M.</div>
+            <div class="center title"> Project Coordinator</div>
         </div>
-        <!--Maybe put some more information down here-->
-    </footer>
+        <div class="box">
+            <img src="Images/about-us-photos/colton.jpeg"
+                 height="200"/>
+            <div class="center name"> Colton W.</div>
+            <div class="center title"> Community Officer</div>
+        </div>
+        <div class="box">
+            <img src="Images/about-us-photos/Will.JPG" height="200"/>
+            <div class="center name"> Will O.</div>
+            <div class="center title"> Project Coordinator</div>
+        </div>
+        <div class="box">
+            <img src="Images/about-us-photos/Alyssa.JPG" height="200"/>
+            <div class="center name"> A.A. Tyler</div>
+            <div class="center title"> Media Coordinator</div>
+        </div>
+    </div>
 </div>
+<div id="footer" class="panel-footer">
+    <!--<div id="footer">-->
+    <div class="container">
+        <p class="center">Aggie Coding Club 2016 |
+            aggiecodingclub@gmail.com </p>
+    </div>
+    <div class="container">
+        <p class="center">&copy; ACC</p>
+    </div>
+</div>
+
+
+<script src="js/jquery-2.2.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/hamburger.js"></script>
 </body>
 </html>

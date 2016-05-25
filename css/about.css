@@ -3,9 +3,26 @@ div.box {
     margin: 5px;
 }
 
-div.center {
+.center {
     text-align: center;
     margin: 5px 0;
+}
+
+html, body, div#wrapper {
+    height: 100%;
+}
+
+div#wrapper {
+    height: auto;
+    min-height: 100%;
+    padding-bottom: 10em;
+}
+
+div#footer, footer {
+    clear: both;
+    position: relative;
+    z-index: 10;
+    transform: translateY(-100%);
 }
 
 div.name { font-size: 1.4em; }
