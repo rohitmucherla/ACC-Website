@@ -1,6 +1,12 @@
 div.box {
     display: inline-block;
     margin: 5px;
+    text-align: center;
+}
+
+img {
+    height: 180px;
+    margin: auto;
 }
 
 .center {
