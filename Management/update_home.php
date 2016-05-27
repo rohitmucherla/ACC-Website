@@ -1,11 +1,11 @@
 <?php
 //this file includes the nessecary db information
 //it must be included on every webpage that a user can visit
-//please insert this next line inside the <div class="container"> inside the <body>
+//please insert this next line inside  the <body>
 //<?php echo $nav_bar; //? //>
 //please ensure to correct its closing by removing the comments infront of ? and >
 //it creates the nav-bar
-include 'important.php';
+include '../nav-bar.php';
 
 //check user logged in
 if (empty($_SESSION['user'])) {
@@ -45,14 +45,12 @@ if (empty($_SESSION['user'])) {
 
 		</head>
 		<body >
+      <?php echo $nav_bar; ?>
 		  <div class="container">
-
-		      <?php echo $nav_bar; ?>
 
 		    <script src="js/jquery-2.2.1.js"></script>
 		    <script src="js/bootstrap.min.js"></script>
 		    <script src="js/hamburger.js"></script>
-
 
 		    <div class="jumbotron vertical-center">
 

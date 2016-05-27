@@ -1,7 +1,6 @@
 <?php
   // First we execute our common code to connection to the database and start the session
-  require("common.php");
-  include 'nav-bar.php';
+  include '../nav-bar.php';
 
   if (empty($_SESSION['user'])) {
     //redirect to login
@@ -114,9 +113,10 @@
 
 </head>
 <body >
+  <?php echo $nav_bar; ?>
   <div class="container">
 
-    <?php echo $nav_bar; ?>
+
 
     <script src="js/jquery-2.2.1.js"></script>
     <script src="js/bootstrap.min.js"></script>

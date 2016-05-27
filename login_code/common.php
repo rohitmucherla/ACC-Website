@@ -6,6 +6,11 @@
     $host = "localhost";
     $dbname = "ACC";
 
+    //here we need to create an unsecure user who only has read priviledges on our database
+    $unsecure_user = "unsecure_user";
+    $unsecure_password = "CuQm2euqyv8Ewaykv6";//remember to still create a password
+    //same host and db im only changing user's priviledges
+
     // UTF-8 is a character encoding scheme that allows you to conveniently store
     // a wide varienty of special characters, like ¢ or €, in your database.
     // By passing the following $options array to the database connection code we
@@ -37,14 +42,33 @@
         die("Failed to connect to the database: " );//. $ex->getMessage()
     }
 
+    try
+    {
+        // This statement opens a connection to your database using the PDO library
+        // PDO is designed to provide a flexible interface between PHP and many
+        // different types of database servers.  For more information on PDO:
+        // http://us2.php.net/manual/en/class.pdo.php
+        $unsecure_db = new PDO("mysql:host={$host};dbname={$dbname};charset=utf8", $unsecure_user, $unsecure_password, $options);
+    }
+    catch(PDOException $ex)
+    {
+        // If an error occurs while opening a connection to your database, it will
+        // be trapped here.  The script will output an error and stop executing.
+        // Note: On a production website, you should not output $ex->getMessage().
+        // It may provide an attacker with helpful information about your code
+        // (like your database username and password).
+        die("Failed to connect to the database: " );//. $ex->getMessage()
+    }
     // This statement configures PDO to throw an exception when it encounters
     // an error.  This allows us to use try/catch blocks to trap database errors.
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $unsecure_db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // This statement configures PDO to return database rows from your database using an associative
     // array.  This means the array will have string indexes, where the string value
     // represents the name of the column in your database.
     $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+    $unsecure_db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
     // This block of code is used to undo magic quotes.  Magic quotes are a terrible
     // feature that was removed from PHP as of PHP 5.4.  However, older installations

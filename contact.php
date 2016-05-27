@@ -1,3 +1,5 @@
+<?php
+include 'nav-bar.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,31 +15,7 @@
    <div class="container">
     <div id="wrapper">
 
-        <div class="page-header">
-            <!--<img style="float:right" src="acc.jpeg" alt="description" title="acc-logo" width="70" height="70" />-->
-            <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#500000;">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a style="color:#ffffff;" class="navbar-brand" href="index.html">Aggie Coding Club</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse navbar-right">
-          <ul class="nav navbar-nav">
-            <li class="nav-item"><a style="color:#ffffff;" href="index.html">Home</a></li>
-            <li class = "nav-item"><a style="color:#ffffff;" href="about.html">About</a></li>
-            <li class = "nav-item"><a style="color:#ffffff;" href="resources.html">Resources</a></li>
-            <li class = "nav-item"><a style="color:#ffffff;" href="projects.html">Projects</a></li>
-            <li class = "active nav-item"><a style="color:#ffffff; background-color:#b3b3b3" href="#">Apply</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
-        </div>
+        <?php echo $nav_bar; ?>
 
        <?php
    if(isset($_POST["submit"])) {

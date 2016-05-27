@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/projects_v2.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main_v2.css">
-    <script type="text/javascript" src="JavaScript.js"></script>
+    
     <link rel='icon' href='Images/Logo.png'/>
 	</head>
 	<body>
@@ -39,7 +39,7 @@
       if (!empty($_SESSION['user'])) {
         if ( ($_SESSION['user']['user_type']=="Administrator") || ($_SESSION['user']['user_type']=="Operator") ){
           echo '
-    <!--we want to put a form here so site admins cans update stuff-->
+    <!--we want to put a form here so site admins can update stuff-->
           ';
         }
       }
@@ -75,33 +75,3 @@
 
 	</body>
 </html>
-
-
-<!--
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">ACC Website</a>
-                </h4>
-            </div>
-            <div id="collapseTwo" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <p>Because the ACC is a project-based coding club, we decided we wanted to build our own website. This project is what became of that initiative. You're viewing it right now!</p>
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Etc.</a>
-                </h4>
-            </div>
-            <div id="collapseThree" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <p>More Projects to come! Feel free to contact us with ideas</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
--->

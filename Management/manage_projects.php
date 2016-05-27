@@ -1,5 +1,5 @@
 <?php
-include 'nav-bar.php';
+include '../nav-bar.php';
 
 //check user logged in
 if (empty($_SESSION['user'])) {
@@ -41,9 +41,10 @@ if (empty($_SESSION['user'])) {
 
 		</head>
 		<body >
+      <?php echo $nav_bar; ?>
 		  <div class="container">
 
-        <?php echo $nav_bar; ?>
+
 
 		    <script src="../js/jquery-2.2.1.js"></script>
 		    <script src="..js/bootstrap.min.js"></script>

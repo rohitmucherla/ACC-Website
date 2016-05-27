@@ -1,7 +1,7 @@
 <?php
 
-  //execute common code to connect to the db and staryt the session
-  require("common.php");
+  //execute common code to connect to the db and start the session
+  include '../nav-bar.php';
 
   //check if reg form has been submitted
   if (!empty($_POST)) {
@@ -31,7 +31,7 @@
     } catch (PDOException $e) {
       //should not output $e->getMessage() on production site
       //gives attackers helpful information about code
-      die("Failed to run query: ".$e->getMessage());
+      die("Failed to run query: ");//.$e->getMessage()
     }
 
     //array with next row or false if no rows
@@ -52,7 +52,7 @@
     } catch (PDOException $e) {
       //should not output $e->getMessage() on production site
       //gives attackers helpful information about code
-      die("Failed to run query: ".$e->getMessage());
+      die("Failed to run query: ");//.$e->getMessage()
     }
     //array with next row or false if no rows
     $row = $stmt->fetch();
@@ -61,7 +61,7 @@
     if($row){
       //should not output $e->getMessage() on production site
       //gives attackers helpful information about code
-      die("Failed to run query: ".$e->getMessage());
+      die("Failed to run query: ");//.$e->getMessage()
     }
 
     $query = "INSERT INTO users (username,password,salt,email) VALUES (:username,:password,:salt,:email)";
@@ -104,7 +104,7 @@
     } catch (PDOException $e) {
       //should not output $e->getMessage() on production site
       //gives attackers helpful information about code
-      die("Failed to run query: ".$e->getMessage());
+      die("Failed to run query: ");//.$e->getMessage()
     }
 
     //redirects the user to the login page after register

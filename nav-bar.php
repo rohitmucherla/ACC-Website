@@ -1,6 +1,15 @@
 <?php
 //execute common code to connect to db and start session
 require("login_code/common.php");
+$my_name = basename($_SERVER["PHP_SELF"],".php");
+
+//if its in the main folder leave it alone
+$fix_main_links = "";
+
+//if the file is not in the main folder fix links
+if ( ($my_name != "index") && ($my_name != "about") && ($my_name != "resources") && ($my_name != "projects") && ($my_name != "contact")){
+  $fix_main_links="../";
+}
 $nav_bar='
 <!-- Fixed navbar -->
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -15,13 +24,25 @@ $nav_bar='
   </div>
   <div id="navbar" class="navbar-collapse collapse navbar-right">
     <ul class = "nav navbar-nav">
-      <li class = "active nav-item"><a href="index.php">Home</a></li>
-      <li class = "nav-item"><a href="about.php">About</a></li>
-      <li class = "nav-item"><a href="resources.php">Resources</a></li>
-      <li class = "nav-item"><a href="projects.php">Projects</a></li>
-      <li class = "nav-item"><a href="contact.php">Contact</a></li>';
+      <li class = "active nav-item"><a href="'.$fix_main_links.'index.php">Home</a></li>
+      <li class = "nav-item"><a href="'.$fix_main_links.'about.php">About</a></li>
+      <li class = "nav-item"><a href="'.$fix_main_links.'resources.php">Resources</a></li>
+      <li class = "nav-item"><a href="'.$fix_main_links.'projects.php">Projects</a></li>
+      <li class = "nav-item"><a href="'.$fix_main_links.'contact.php">Contact</a></li>';
 
   if (!empty($_SESSION['user'])) {
+
+    //if its in the Mgmt folder leave it alone
+    $fix_managment_links ="";
+
+    //if its in the main folder
+    if ( ($my_name == "index") || ($my_name == "about") || ($my_name == "resources") || ($my_name == "projects") || ($my_name == "contact")){
+      $fix_managment_links="Management/";
+    }
+    //if its in the login folder
+    if ( ($my_name == "edit_account") || ($my_name == "register") ){
+      $fix_managment_links="../Management/";
+    }
     $nav_bar .='
     <li class = "nav-item">
       <div class="btn-group open">
@@ -30,17 +51,30 @@ $nav_bar='
         </button>
         <ul class="dropdown-menu">
           <!--allowed for all users because im sanitizing input and only accesses one database-->
-          <a href="Management/project_submission.php">Submit Project</a><br />
+          <a href="'.$fix_managment_links.'project_submission.php">Submit Project</a><br />
       ';
 
      //<!--allowed for less users because they can edit project information and are expected to know not to break things-->
      if ( ($_SESSION['user']['user_type']=="Administrator") || ($_SESSION['user']['user_type']=="Operator") ){
-        $nav_bar .= "<a href='Management/update_home.php'>Update Info</a><br />";
+        $nav_bar .= '<a href="'.$fix_managment_links.'update_home.php">Update Info</a><br />';
      }
 
      //<!--allowed only for site Administrators because they can edit user information which is big security flaw.-->
      if ($_SESSION['user']['user_type']=="Administrator"){
-      $nav_bar .=  "<a href='Management/edit_users.php'>Edit Users</a><br />";
+      $nav_bar .=  '<a href="'.$fix_managment_links.'edit_users.php">Edit Users</a><br />';
+      $nav_bar .=  '<a href="'.$fix_managment_links.'manage_projects.php">Manage Projects</a><br />';
+     }
+
+     //if its in login folder leave it alone
+     $fix_login_links="";
+
+     //if its in the main folder
+     if ( ($my_name == "index") || ($my_name == "about") || ($my_name == "resources") || ($my_name == "projects") || ($my_name == "contact")){
+       $fix_login_links="login_code/";
+     }
+     //if its in the Mgmt folder
+     if ( ($my_name == "edit_users") || ($my_name == "manage_projects") || ($my_name == "project_submission")|| ($my_name == "update_home")){
+       $fix_login_links="../login_code/";
      }
     $nav_bar .=  '
         </ul>
@@ -55,8 +89,8 @@ $nav_bar='
        $nav_bar .=  '
         </button>
         <ul class="dropdown-menu">
-          <li class = "nav-item"><a href="login_code/edit_account.php">Preferences</a></li>
-          <li class = "nav-item"><a href="login_code/logout.php">Logout</a></li>
+          <li class = "nav-item"><a href="'.$fix_login_links.'edit_account.php">Preferences</a></li>
+          <li class = "nav-item"><a href="'.$fix_login_links.'logout.php">Logout</a></li>
         </ul>
       </div>
     </li>

@@ -20,9 +20,10 @@ include 'nav-bar.php'
     </style>
 </head>
 <body background="Images/academic_plaza.jpeg">
+  <?php echo $nav_bar; ?>
   <div class="container">
 
-    <?php echo $nav_bar; ?>
+
 
     <script src="js/jquery-2.2.1.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -79,7 +80,6 @@ include 'nav-bar.php'
                 style="border: 0" width="400" height="400" frameborder="0"
                 scrolling="no"></iframe>
     </div>
-
 
 
 
