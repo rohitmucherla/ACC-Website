@@ -45,8 +45,6 @@
       <?php echo $nav_bar; ?>
  		  <div class="container">
 
-
-
  		    <script src="js/jquery-2.2.1.js"></script>
  		    <script src="js/bootstrap.min.js"></script>
  		    <script src="js/hamburger.js"></script>

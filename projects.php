@@ -1,11 +1,16 @@
 <?php
   include 'nav-bar.php';
 
-  $query = "SELECT P.id,P.P_Owner,P.Email,P.P_Name,P.devs_Assigned,description_table.description,description_table.status FROM Projects AS P LEFT JOIN description_table ON description_table.id=P.id";
+  $query = "SELECT P.id,P.P_Owner,P.Email,P.P_Name,description_table.description,description_table.status FROM Projects AS P LEFT JOIN description_table ON description_table.id=P.id";
 
   try {
     // These two statements run the query against your database table.
-    $stmt = $db->prepare($query);
+    if (empty($_SESSION['user'])) {
+      $stmt = $unsecure_db->prepare($query);
+    }
+    else {
+      $stmt = $db->prepare($query);
+    }
     $result=$stmt->execute();
   }
   catch(PDOException $ex) {
@@ -16,6 +21,7 @@
   //put rows into array
   $rows = $stmt->fetchAll();
 ?>
+
  <!DOCTYPE html>
 <html>
 	<head>
@@ -26,7 +32,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/projects_v2.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main_v2.css">
-    
+
     <link rel='icon' href='Images/Logo.png'/>
 	</head>
 	<body>
@@ -38,8 +44,22 @@
     <?php
       if (!empty($_SESSION['user'])) {
         if ( ($_SESSION['user']['user_type']=="Administrator") || ($_SESSION['user']['user_type']=="Operator") ){
-          echo '
-    <!--we want to put a form here so site admins can update stuff-->
+          if (!empty($_POST)) {}
+            echo '
+            <form method="post" action="projects.php">
+  		        Project Owner: <input type="text" name="Project_Owner">
+  		        <br>
+  						Email: <input type="email" name="Owner_Email">
+  						<br>
+  		        Project Name: <input type="text" name="Project_Name">
+  						<br>
+  						Description:
+  						<br>
+  						<textarea name="Description" rows="8" cols="40"></textarea>
+  						<br>
+
+              <input type="submit" value="Submit">
+            </form>
           ';
         }
       }
@@ -59,10 +79,10 @@
           <div class="panel panel-default">
               <div class="panel-heading">
                   <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">'.$Project_Name.'</a>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse'.$Project_ID.'">'.$Project_Name.'</a>
                   </h4>
               </div>
-              <div id="collapseOne" class="panel-collapse collapse in">
+              <div id="collapse'.$Project_ID.'" class="panel-collapse collapse in">
                   <div class="panel-body">
                       <p>'.$Description.'</p>
                   </div>

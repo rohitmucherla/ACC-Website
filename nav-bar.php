@@ -1,13 +1,13 @@
 <?php
 //execute common code to connect to db and start session
 require("login_code/common.php");
-$my_name = basename($_SERVER["PHP_SELF"],".php");
+$my_folder = basename(getcwd());
 
 //if its in the main folder leave it alone
 $fix_main_links = "";
 
 //if the file is not in the main folder fix links
-if ( ($my_name != "index") && ($my_name != "about") && ($my_name != "resources") && ($my_name != "projects") && ($my_name != "contact")){
+if ($my_folder!="ACC-Website"){
   $fix_main_links="../";
 }
 $nav_bar='
@@ -36,11 +36,11 @@ $nav_bar='
     $fix_managment_links ="";
 
     //if its in the main folder
-    if ( ($my_name == "index") || ($my_name == "about") || ($my_name == "resources") || ($my_name == "projects") || ($my_name == "contact")){
+    if ($my_folder=="ACC-Website"){
       $fix_managment_links="Management/";
     }
     //if its in the login folder
-    if ( ($my_name == "edit_account") || ($my_name == "register") ){
+    if ($my_folder=="login_code" ){
       $fix_managment_links="../Management/";
     }
     $nav_bar .='
@@ -69,11 +69,11 @@ $nav_bar='
      $fix_login_links="";
 
      //if its in the main folder
-     if ( ($my_name == "index") || ($my_name == "about") || ($my_name == "resources") || ($my_name == "projects") || ($my_name == "contact")){
+     if ($my_folder=="ACC-Website"){
        $fix_login_links="login_code/";
      }
      //if its in the Mgmt folder
-     if ( ($my_name == "edit_users") || ($my_name == "manage_projects") || ($my_name == "project_submission")|| ($my_name == "update_home")){
+     if ($my_folder=="Management"){
        $fix_login_links="../login_code/";
      }
     $nav_bar .=  '
@@ -106,5 +106,5 @@ else {
 }
 $nav_bar .='
   </div>
-</nav>'
+</nav>';
 ?>
