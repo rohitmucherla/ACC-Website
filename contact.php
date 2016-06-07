@@ -32,7 +32,7 @@
             <li class = "nav-item"><a style="color:#ffffff;" href="about.html">About</a></li>
             <li class = "nav-item"><a style="color:#ffffff;" href="resources.html">Resources</a></li>
             <li class = "nav-item"><a style="color:#ffffff;" href="projects.html">Projects</a></li>
-            <li class = "active nav-item"><a style="color:#ffffff; background-color:#b3b3b3" href="#">Apply</a></li>
+            <li class = "active nav-item"><a style="color:#ffffff; background-color:#b3b3b3" href="#">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
