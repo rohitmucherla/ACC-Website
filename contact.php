@@ -9,7 +9,7 @@
     <title>Apply</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="shortcut icon" href="Images/smiley.png">
-    <script src="jss/script.js"></script>
+    <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -49,11 +49,11 @@
     $LastName = $_POST["LastName"];
     $Email = $_POST["Email"];
 <<<<<<< HEAD
-       
+
     $FirstNameText = "First Name: " . $FirstName . "\n";
     $LastNameText = "Last Name: " . $LastName . "\n";
     $EmailText = "Email: " . $Email . "\n";
-       
+
 =======
     $Phone = $_POST["Phone"];
 
@@ -87,7 +87,7 @@
     <title>Contact</title>
     <link rel="stylesheet" href="css/contact.css">
     <link rel="shortcut icon" href="Images/smiley.png">
-    <script src="jss/script.js"></script>
+    <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -110,7 +110,7 @@
             </section>
         </div>
 
-       
+
 =======
 
     if (mail ("steerzac@tamu.edu", "ACC Website Interest Form", $FirstNameText. $LastNameText . $EmailText . $ClassificationText . $PhoneText . $MessageOfText)) {
@@ -146,7 +146,7 @@
                         <label for="FirstName">First: </label>
                         <input name="FirstName" type="text" placeholder="John" required>
                     </p>
-                    
+
                     <p>
                         <label for="LastName">Last: </label>
                         <input name="LastName" type="text" placeholder="Doe" required>
