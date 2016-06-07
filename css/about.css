@@ -1,136 +1,43 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+div.box {
+    display: inline-block;
+    margin: 5px;
+    text-align: center;
+}
 
-html {
-    font-family: 'Open Sans', sans-serif;
-    max-width: auto;
-    font-size: 16px;
-    /*top-bottom, left-right*/
-    margin: 0 0;
+img {
+    height: 180px;
+    margin: auto;
+}
+
+.center {
+    text-align: center;
+    margin: 5px 0;
+}
+
+html, body, div#wrapper {
+    height: 100%;
+}
+
+div#wrapper {
+    height: auto;
+    min-height: 100%;
+    padding-bottom: 10em;
+}
+
+div#footer, footer {
+    clear: both;
     position: relative;
-    background-color: #E3E3E3;
-    height: 100%;
-    padding: 0;
+    z-index: 10;
+    transform: translateY(-100%);
 }
 
-.wrapper{
-    margin-left: auto;
-    margin-right: auto;
-    width: 1000px;
-}
+div.name { font-size: 1.4em; }
 
+div.title { font-size: 1.2em; }
 
-body {
-    font-size: 16px;
-    font-weight: 400;
-    color: #000;
-    margin: 0;
-    padding: 0;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    height: 100%;
-    overflow-x: scroll;
-}
-
-div#header {
-    /*semi-transparent background for better text readability*/
-    background-color: rgb(80,0,0);
-    height: 80px;
-    min-width: 1000px;
-}
-
-div#header h1 {
-    display: inline-block;
-}
-
-div#header div#title_logo {
-    display: inline-block;
-    padding: 0 0  0 20px;
-    color: #fff;
-}
-
-section.nav {
-    width: 50%;
-    min-width: 500px;
-    height: 100px;
-    display: inline-block;
-    float: right;
-    right: 0;
-    padding: 10px 10px 0 0;
-    clear: both;
-
-}
-
-section.nav::after {
-    content: "";
-    display: block;
-    clear: both;
-}
-
-section.nav ul {
-    /*remove bullets*/
-    width: 50%;
-    min-width: 600px;
-    height: 100px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-    float: right;
-
-}
-
-section.nav ul li {
-    /*so that the items appear all on the same line*/
-    float: left;
-    margin: 8px;
-
-}
-
-/*section.nav ul li a:after {*/
-section.nav ul li a[aria-haspopup="true"]::after {
-    content: "";
-    display: inline-block;
-    width: 0;
-    height: 0;
-    margin-left: 5px;
-}
-
-section.nav ul ul {
-    /*second menu level*/
-    /*don't show by default*/
-    display: none;
-    /*absolute positioned so that it doesn't count toward parent element size*/
-    position: absolute;
-}
-section.nav ul li:hover > ul {
-    /*show when parent is hovered*/
-    display: block;
-    /*make these display above the rest of the page*/
-    z-index: 3;
-}
-section.nav ul li:hover > ul li {
-    display: block;
-    /*make them not all bunch to one side*/
-    float: none;
-    margin: 0;
-}
-section.nav ul li:hover > ul li a {
-    /*hoverd sub-list*/
-    /*constant width so they all line up*/
-    width: 125px;
-}
-
-section.nav ul li a {
-    background-color: transparent;
-    display: block;
-    padding: 12px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 100%;
-}
-
-section.nav ul li a:hover {
-    background-color: #aaa;
-    transition: background-color .25s;
+@media screen and (max-width: 800px) {
+    div.box {
+        display: block;
+        text-align: center;
+    }
 }

@@ -212,6 +212,14 @@ aside {
     width: 98%;
     border-radius: 5px;
     background-color:beige;
+/*    FIXME to beige*/
+}
+.message-form input#MessageOfText {
+    width: 98%;
+    height: 20px;
+    border-radius: 5px;
+    background-color:beige;
+    
 }
 .message-form input#MessageOfText {
     width: 98%;
@@ -221,7 +229,14 @@ aside {
     
 }
 
-
+#submit {
+    margin-left: 185px;
+    width:40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 100%;
+/*    FIXME to nothing*/
+}
 
 .message-form select {
     width: 99.5%;
@@ -231,12 +246,6 @@ aside {
 .message-form textarea {
     width: 98%;
     background-color: beige;
-}
-
-#submit {
-    margin-left: 50px;
-    width:75%;
-    text-align: center;
 }
 
 .footer {
