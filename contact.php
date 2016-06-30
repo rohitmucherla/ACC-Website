@@ -37,7 +37,7 @@ include 'nav-bar.php'; ?>
         $MessageOfText = "Message: " . $_POST["MessageOfText"];
     }
 
-    if (mail ("jhinchley@tamu.edu", "ACC Website Interest Form", $FirstNameText. $LastNameText . $EmailText . $ClassificationText . $PhoneText . $MessageOfText)) {
+    if (mail ("aggiecodingclub@gmail.com", "ACC Website Interest Form", $FirstNameText. $LastNameText . $EmailText . $ClassificationText . $PhoneText . $MessageOfText)) {
         echo '<div class="alert alert-success">Thank You! An officer will contact you shortly</div>';
     } else {
         echo '<div class="alert alert-danger">Sorry there was an error sending your message. We are working to fix the problem</div>';
@@ -116,15 +116,24 @@ include 'nav-bar.php'; ?>
             </div>
         </div>
 
-        <footer class="well" style="text-align:center;">
-            <div>
-                <div>
-                 You can also email us directly at: <a href="mailto:aggiecodingclub@gmail.com" style="text-decoration:none; color:black;">aggiecodingclub@gmail.com</a>
-                </div>
-                &copy; Aggie Coding Club | Page Designed By:
-                <a href="https://steerzac.github.io" style="text-decoration:none; color:black;" target="_blank">Zac Steer</a>
-            </div>
-        </footer>
+        <div class="footer">
+            &copy; ACC <br>
+            <p class="social-links">
+                Stay Connected with Aggie Coding Club
+                <br>
+                <!--<a href="https://twitter.com/ACC" target="_blank">
+                    <img src="http://www.hdicon.com/wp-content/uploads/2011/07/twitter_icon_2011.png"
+                         alt="icon" title="twitter icon" width="60" height="60"
+                         border="1px"/>
+                </a>-->
+                <a href="https://www.facebook.com/aggiecodingclub" target="_blank">
+                    <img src="http://2yu5yy2vwpsr4dg1ys3jha9o.wpengine.netdna-cdn.com/wp-content/uploads/2015/07/fb-square.png"
+                         alt="icon" title="fb icon" width="40" height="40"
+                         border="1px"/>
+                </a>
+            </p>
+
+        </div>
     </div>
 
     </div>
