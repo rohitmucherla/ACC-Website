@@ -45,7 +45,8 @@
       if (!empty($_SESSION['user'])) {
         if ( ($_SESSION['user']['user_type']=="Administrator") || ($_SESSION['user']['user_type']=="Operator") ){
           if (!empty($_POST)) {}
-            echo '
+            /*
+             echo '
             <form method="post" action="projects.php">
   		        Project Owner: <input type="text" name="Project_Owner">
   		        <br>
@@ -60,7 +61,8 @@
 
               <input type="submit" value="Submit">
             </form>
-          ';
+            ';
+            */
         }
       }
     ?>
