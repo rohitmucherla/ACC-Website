@@ -37,7 +37,7 @@ include 'nav-bar.php'; ?>
         $MessageOfText = "Message: " . $_POST["MessageOfText"];
     }
 
-    if (mail ("steerzac@tamu.edu", "ACC Website Interest Form", $FirstNameText. $LastNameText . $EmailText . $ClassificationText . $PhoneText . $MessageOfText)) {
+    if (mail ("jhinchley@tamu.edu", "ACC Website Interest Form", $FirstNameText. $LastNameText . $EmailText . $ClassificationText . $PhoneText . $MessageOfText)) {
         echo '<div class="alert alert-success">Thank You! An officer will contact you shortly</div>';
     } else {
         echo '<div class="alert alert-danger">Sorry there was an error sending your message. We are working to fix the problem</div>';
