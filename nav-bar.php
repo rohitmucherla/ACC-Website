@@ -1,18 +1,18 @@
 <?php
-//execute common code to connect to db and start session
-require("login_code/common.php");
-$my_folder = basename(getcwd());
+    //execute common code to connect to db and start session
+    require("login_code/common.php");
+    $my_folder = basename(getcwd());
 
-//if its in the main folder leave it alone
-$fix_main_links = "";
+    //if its in the main folder leave it alone
+    $fix_main_links = "";
 
-//if the file is not in the main folder fix links
-if ($my_folder!="ACC-Website"){
-  $fix_main_links="../";
-}
-$nav_bar='
-<!-- Fixed navbar -->
-<nav class="navbar navbar-default navbar-fixed-top">
+    //if the file is not in the main folder fix links
+    if ($my_folder!="ACC-Website"){
+      $fix_main_links="../";
+    }
+    $nav_bar='
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
       <span class="sr-only">Toggle navigation</span>
@@ -30,7 +30,7 @@ $nav_bar='
       <li class = "nav-item"><a href="'.$fix_main_links.'projects.php">Projects</a></li>
       <li class = "nav-item"><a href="'.$fix_main_links.'contact.php">Contact</a></li>';
 
-  if (!empty($_SESSION['user'])) {
+    if (!empty($_SESSION['user'])) {
 
     //if its in the Mgmt folder leave it alone
     $fix_managment_links ="";
@@ -72,6 +72,7 @@ $nav_bar='
      if ($my_folder=="ACC-Website"){
        $fix_login_links="login_code/";
      }
+
      //if its in the Mgmt folder
      if ($my_folder=="Management"){
        $fix_login_links="../login_code/";
@@ -80,7 +81,7 @@ $nav_bar='
         </ul>
       </div>
     </li>
-
+    
     <li class = "nav-item">
       <div class="btn-group open">
         <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
@@ -95,8 +96,8 @@ $nav_bar='
       </div>
     </li>
     ';
-  }
-else {
+    }
+    else {
   $nav_bar.= '
       <li class = "nav-item"><a href="login_code/login.php">
         <button type="button" class="btn btn-primary btn-lg">Login</button>
@@ -104,7 +105,27 @@ else {
       </li>
   ';
 }
-$nav_bar .='
-  </div>
-</nav>';
+    $nav_bar .='
+    </div>
+    </nav>';
+
+    $footer = '
+<div class="footer">
+        &copy; ACC <br>
+        <p class="social-links">
+Stay Connected with Aggie Coding Club
+<br>
+            <!--<a href="https://twitter.com/ACC" target="_blank">
+                <img src="http://www.hdicon.com/wp-content/uploads/2011/07/twitter_icon_2011.png"
+                     alt="icon" title="twitter icon" width="60" height="60"
+                     border="1px"/>
+            </a>-->
+            <a href="https://www.facebook.com/aggiecodingclub" target="_blank">
+                <img src="http://2yu5yy2vwpsr4dg1ys3jha9o.wpengine.netdna-cdn.com/wp-content/uploads/2015/07/fb-square.png"
+                     alt="icon" title="fb icon" width="40" height="40"
+                     border="1px"/>
+            </a>
+        </p>
+
+    </div>';
 ?>
