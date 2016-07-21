@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 <?php
-=======
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +7,7 @@
     <title>Apply</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="shortcut icon" href="Images/smiley.png">
-    <script src="jss/script.js"></script>
+    <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -43,18 +41,18 @@
         </div>
 
        <?php
->>>>>>> 7557f08e0ebdd208acb8bb9d9a5d33cdf10b889a
+
    if(isset($_POST["submit"])) {
     $FirstName = $_POST["FirstName"];
     $LastName = $_POST["LastName"];
     $Email = $_POST["Email"];
-<<<<<<< HEAD
-       
+
+
     $FirstNameText = "First Name: " . $FirstName . "\n";
     $LastNameText = "Last Name: " . $LastName . "\n";
     $EmailText = "Email: " . $Email . "\n";
-       
-=======
+
+
     $Phone = $_POST["Phone"];
 
     $FirstNameText = "First Name: " . $FirstName . "\n";
@@ -62,7 +60,7 @@
     $EmailText = "Email: " . $Email . "\n";
     $PhoneText = "Phone: " . $Phone . "\n";
 
->>>>>>> 7557f08e0ebdd208acb8bb9d9a5d33cdf10b889a
+
     if(isset($_POST["Classification"])) {
         $Classification = $_POST["Classification"];
         $ClassificationText = "Classification: " . $Classification . "\n";
@@ -70,7 +68,7 @@
     if(isset($_POST["MessageOfText"])) {
         $MessageOfText = "Message: " . $_POST["MessageOfText"];
     }
-<<<<<<< HEAD
+
     $sentMail = mail("rohit.mucherla@gmail.com", "ACC Website Interest Form", $FirstNameText. $LastNameText . $EmailText . $ClassificationText . $MessageOfText);
     if($sentMail) {
         echo "Contact form received. Thank you, " . $FirstName;
@@ -87,7 +85,7 @@
     <title>Contact</title>
     <link rel="stylesheet" href="css/contact.css">
     <link rel="shortcut icon" href="Images/smiley.png">
-    <script src="jss/script.js"></script>
+    <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -110,8 +108,8 @@
             </section>
         </div>
 
-       
-=======
+
+
 
     if (mail ("steerzac@tamu.edu", "ACC Website Interest Form", $FirstNameText. $LastNameText . $EmailText . $ClassificationText . $PhoneText . $MessageOfText)) {
         echo '<div class="alert alert-success">Thank You! An officer will contact you shortly</div>';
@@ -123,12 +121,12 @@
 
 
 ?>
->>>>>>> 7557f08e0ebdd208acb8bb9d9a5d33cdf10b889a
+
 
         <div class="main">
             <!--            <img src="http://placehold.it/100x100">-->
 
-<<<<<<< HEAD
+
             <div class="message-form">
                 <h2>Contact Us</h2>
                 <p id="Intro-para">Help us learn more about you by filling out our interest form! Also be sure to connect with us on social media.</p>
@@ -146,7 +144,7 @@
                         <label for="FirstName">First: </label>
                         <input name="FirstName" type="text" placeholder="John" required>
                     </p>
-                    
+
                     <p>
                         <label for="LastName">Last: </label>
                         <input name="LastName" type="text" placeholder="Doe" required>
@@ -160,7 +158,7 @@
                     <p>
                         <label for="Classification">Classification: </label>
                         <select name="Classification">
-=======
+
             <div class="jumbotron">
                 <h2>Apply</h2>
                 <p id="Intro-para">Fill out the interest form below. An officer will contact you with more information about joining the club shortly after.</p>
@@ -201,7 +199,7 @@
                         <label class="control-label col-sm-2" for="Classification">Class: </label>
                         <div class="col-sm-10">
                           <select class="form-control" name="Classification">
->>>>>>> 7557f08e0ebdd208acb8bb9d9a5d33cdf10b889a
+
                            <option value=""></option>
                             <option value="Freshman">Freshman</option>
                             <option value="Sophomore">Sophomore</option>
@@ -209,7 +207,7 @@
                             <option value="Senior">Senior</option>
                             <option value="Grad Student">Grad Student</option>
                         </select>
-<<<<<<< HEAD
+
                     </p>
 
 
@@ -238,7 +236,7 @@
             <a href="https://www.linkedin.com/in/zachary-steer-8b4196103" target="_blank">Zac Steer</a>
         </footer>
     </div>
-=======
+
                         </div>
                     </div>
 
@@ -272,7 +270,7 @@
     <script src="js/jquery-2.2.1.js"></script>
  	<script src="js/bootstrap.min.js"></script>
  	<script src="js/hamburger.js"></script>
->>>>>>> 7557f08e0ebdd208acb8bb9d9a5d33cdf10b889a
+
 </body>
 
 </html>
