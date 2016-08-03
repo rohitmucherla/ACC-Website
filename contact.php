@@ -39,37 +39,7 @@
     </nav>
         </div>
 
-       <?php
-       
-       ini_set('display_errors',1);  
-       error_reporting(E_ALL);
-       
-   if(isset($_POST["submit"])) {
-    $FirstName = $_POST["FirstName"];
-    $LastName = $_POST["LastName"];
-    $Email = $_POST["Email"];
-    $Phone = $_POST["Phone"];
-
-    $FirstNameText = "First Name: " . $FirstName . "\n";
-    $LastNameText = "Last Name: " . $LastName . "\n";
-    $EmailText = "Email: " . $Email . "\n";
-    $PhoneText = "Phone: " . $Phone . "\n";
-
-    if(isset($_POST["Classification"])) {
-        $Classification = $_POST["Classification"];
-        $ClassificationText = "Classification: " . $Classification . "\n";
-    }
-    if(isset($_POST["MessageOfText"])) {
-        $MessageOfText = "Message: " . $_POST["MessageOfText"];
-    }
-
-    if (mail("steerzac@tamu.edu", "ACC Website Interest Form", $FirstNameText . $LastNameText . $EmailText . $ClassificationText . $PhoneText . $MessageOfText)) {
-        echo '<div class="alert alert-success">Thank You! An officer will contact you shortly</div>';
-    } else {
-        echo '<div class="alert alert-danger">Sorry there was an error sending your message. We are working to fix the problem</div>';
-    }
-}
-?>
+       <?php ?>
 
         <div class="main">
             <!--            <img src="http://placehold.it/100x100">-->
