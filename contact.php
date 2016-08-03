@@ -1,3 +1,5 @@
+<?php ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,8 +38,6 @@
       </div>
     </nav>
         </div>
-
-       <?php ?>
 
         <div class="main">
             <!--            <img src="http://placehold.it/100x100">-->
@@ -119,7 +119,8 @@
     </div>
 
     </div>
-    <script src="js/jquery-2.2.1.js"></script>
+   
+   <script src="js/jquery-2.2.1.js"></script>
  	<script src="js/bootstrap.min.js"></script>
  	<script src="js/hamburger.js"></script>
 </body>
