@@ -1,20 +1,18 @@
-<?php ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Apply</title>
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta charset="UTF-8">
+   <title>Apply</title>
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-<div class="container">
+   <h3>It works...</h3>
+<!-- <div class="container">
    <div id="wrapper">
 
    <div class="page-header">
-      <!--<img style="float:right" src="acc.jpeg" alt="description" title="acc-logo" width="70" height="70" />-->
       <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#500000;">
          <div class="container">
             <div class="navbar-header">
@@ -36,7 +34,7 @@
                   <li class = "nav-item"><a style="color:#ffffff;" href="projects.html">Projects</a></li>
                   <li class = "active nav-item"><a style="color:#ffffff; background-color:#b3b3b3" href="#">Apply</a></li>
                </ul>
-            </div><!--/.nav-collapse -->
+            </div>
          </div>
       </nav>
    </div>
@@ -103,7 +101,7 @@
 <div class="form-group">
 <input type="submit" name="submit" class="form-control btn btn-default">
 </div>
-</form> -->
+</form>
 </div>
 </div>
 
@@ -123,6 +121,7 @@ You can also email us directly at: <a href="mailto:aggiecodingclub@gmail.com" st
 <script src="js/jquery-2.2.1.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/hamburger.js"></script>
+-->
 </body>
 
 </html>
