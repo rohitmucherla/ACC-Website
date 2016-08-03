@@ -40,6 +40,10 @@
         </div>
 
        <?php
+       
+       ini_set('display_errors',1);  
+       error_reporting(E_ALL);
+       
    if(isset($_POST["submit"])) {
     $FirstName = $_POST["FirstName"];
     $LastName = $_POST["LastName"];
@@ -59,15 +63,12 @@
         $MessageOfText = "Message: " . $_POST["MessageOfText"];
     }
 
-    if (mail ("steerzac@tamu.edu", "ACC Website Interest Form", $FirstNameText. $LastNameText . $EmailText . $ClassificationText . $PhoneText . $MessageOfText)) {
+    if (mail("steerzac@tamu.edu", "ACC Website Interest Form", $FirstNameText . $LastNameText . $EmailText . $ClassificationText . $PhoneText . $MessageOfText)) {
         echo '<div class="alert alert-success">Thank You! An officer will contact you shortly</div>';
     } else {
         echo '<div class="alert alert-danger">Sorry there was an error sending your message. We are working to fix the problem</div>';
     }
 }
-
-
-
 ?>
 
         <div class="main">
